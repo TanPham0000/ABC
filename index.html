@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A Bigger Circle - Making brands part of the conversation with audience intelligence">
+    <title>A BIGGER CIRCLE</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/overlay.css">
+    <link rel="icon" href="assets/favicon.ico">
+  </head>
+  <body>
+    <main class="container">
+      <section class="left" aria-labelledby="conversation-title">
+        <div class="inner-container">
+          <header>
+            <a href="index.html" aria-label="A Bigger Circle homepage">
+              <img src="assets/logo/ULTRAMARINE_Left.svg" alt="A Bigger Circle Logo" class="logo logo-desktop">
+              <img src="assets/logo/ULTRAMARINE_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
+            </a>
+          </header>
+          <h1 id="main-title">We're making conversation</h1>
+            <nav aria-label="Social media links">
+              <nav class="social-nav">
+                <address class="location">
+                  <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
+                </address>
+                <ul class="social-list">
+                  <li class="info-icon-item">
+                    <a href="/about" class="social-link info-icon" aria-label="More information about us">
+                      <img src="assets/icons-Ultramarine/info.svg" alt="">
+                    </a>
+                  </li>
+                  <li class="social-grid-container">
+                    <ul class="social-grid">
+                      <li><a href="https://tiktok.com/@abiggercircle" class="social-link" aria-label="TikTok"><img src="assets/icons-Ultramarine/tiktok.svg" alt=""></a></li>
+                      <li><a href="https://instagram.com/abiggercircle" class="social-link" aria-label="Instagram"><img src="assets/icons-Ultramarine/instagram.svg" alt=""></a></li>
+                      <li><a href="https://linkedin.com/company/abiggercircle" class="social-link" aria-label="LinkedIn"><img src="assets/icons-Ultramarine/linkedIn.svg" alt=""></a></li>
+                      <li><a href="mailto:contact@abiggercircle.com" class="social-link" aria-label="Email us"><img src="assets/icons-Ultramarine/email.svg" alt=""></a></li>
+                      <li><a href="https://x.com/abiggercircle" class="social-link" aria-label="notTwitter"><img src="assets/icons-Ultramarine/website.svg" alt=""></a></li>
+                      <li><a href="https://wa.me/1234567890" class="social-link" aria-label="WhatsApp"><img src="assets/icons-Ultramarine/whatsapp.svg" alt=""></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </nav>
+        </div>
+      </section>      
+
+      <section class="right">
+        <figure class="hero-image">
+          <img src="assets/mainimg.jpg" alt="Brand visual" loading="eager">
+          <figcaption>
+            <h2>We went on a one week
+              workation to Crete</h2>
+            <p>
+              In what we can now officially call a tradition, the team at
+              A Bigger Circle goes on workation together every year.
+            </p>
+            <button class="read-more" id="openOverlay" data-overlay-target="crete-overlay">Read more</button>
+          </figcaption>
+        </figure>
+        <nav class="nav-arrows" aria-label="Scroll navigation">
+          <button aria-label="Scroll up" id="scrollUp">↑</button>
+          <button aria-label="Scroll down" id="scrollDown">↓</button>
+        </nav>
+      </section>
+      
+      <!-- Overlay Container -->
+      <section class="overlay" id="crete-overlay">
+        <div class="overlay-split">
+          <!-- LEFT PANEL -->
+          <section class="overlay-left">
+            <div class="overlay-header">
+              <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo">
+              <button class="close" id="closeBtn" aria-label="Close overlay">×</button>
+            </div>
+            <div class="overlay-body">
+              <h2>Perhaps, pickles have a pontificating part to play</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button class="contact-button">Contact us</button>
+            </div>
+            <div class="overlay-footer">
+              <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
+              <div class="social-icons"></div>
+            </div>
+          </section>
+      
+          <!-- RIGHT PANEL -->
+          <section class="overlay-right">
+            <img src="./assets/team.jpg" alt="Team photo">
+          </section>
+        </div>
+      </section>
+        
+    </main>
+    <script src="js/overlay.js"></script>
+  </body>
+</html>

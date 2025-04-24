@@ -1,0 +1,134 @@
+.overlay {
+    position: fixed; /* Sit on top of the page */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 1000; /* Sit on top */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+    animation-duration: 1s;
+    animation-name: slide-in;
+}
+
+.overlay.closing {
+    animation: slide-out 1s forwards;
+}
+
+/* Keyframes for slide-in */
+@keyframes slide-in {
+    from {
+        transform: translateX(150vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Keyframes for slide-out */
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(150vw);
+    }
+}
+
+.overlay-split {
+  display: flex;
+  height: 100%;
+}
+
+.overlay-left {
+    background-color: var(--primary);
+    color: var(--secondary);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    position: relative;
+}
+
+.overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.overlay-header .logo {
+  height: 3rem;
+}
+
+.overlay-header .close {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+.overlay-body {
+  flex-grow: 1;
+  margin-top: 2rem;
+}
+
+.overlay-body h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.overlay-body p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.overlay-body .contact-button {
+  padding: 0.8rem 1.6rem;
+  border: 2px solid var(--secondary);
+  background: none;
+  color: var(--secondary);
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+}
+
+.overlay-footer {
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.5rem;
+ 
+}
+
+.overlay-right {
+    position: relative;
+    background-color: var(--secondary);
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+.overlay-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

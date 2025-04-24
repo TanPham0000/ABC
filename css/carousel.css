@@ -1,0 +1,118 @@
+/* Button container for carousel controls */
+.button-container {
+  position: absolute;
+  bottom: 20px;       /* Push to the bottom */
+  left: 50%;          /* Center horizontally */
+  transform: translateX(-50%);  /* Perfectly center */
+  z-index: 5;
+  display: flex;
+  gap: 15px;
+}
+
+.carousel-btn {
+  background: var(--pink);
+  color: var(--secondary);
+  border: none;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-btn:hover {
+  background: var(--secondary);
+  color: var(--pink);
+  transition-duration: 30ms;
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Track holding the slides */
+.carousel-track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-track.horizontal {
+  flex-direction: row;
+}
+
+.carousel-track.vertical {
+  flex-direction: column;
+}
+
+
+/* Single carousel item */
+.carousel-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Background media inside carousel item */
+.carousel-item .carousel-content {
+  position: absolute;
+  border-radius: inherit; /* inherit from parent */
+  border-radius: inherit;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;  
+  z-index: 1;
+}
+
+/* Optional: overlay text positioning
+.overlay-text {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  z-index: 2;
+  color: var(--secondary);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+}
+*/
+
+@media (max-width: 768px) {
+  .carousel-media {
+      max-width: 90%; /* Adjust the max width for smaller screens */
+      max-height: 90%; /* Adjust the max height for smaller screens */
+  }
+}
+
+@media (hover: none) {
+  .button-container {
+      display: none;
+  }
+}
