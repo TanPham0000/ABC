@@ -198,10 +198,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Auto-advance carousel (optional)
   // Uncomment this if you want auto-sliding
-  /*
+
   const autoSlideInterval = 5000; // 5 seconds
   setInterval(() => {
     nextSlide();
   }, autoSlideInterval);
-  */
 });

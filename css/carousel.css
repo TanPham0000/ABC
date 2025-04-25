@@ -60,7 +60,6 @@
   transition: none; /* Disable transition while dragging for smoother feel */
 }
 
-
 .carousel-slide figcaption {
   position: absolute;
   bottom: 2rem;
@@ -118,8 +117,9 @@
 
 .carousel-dots {
   position: absolute;
-  bottom: 1rem;
-  left: 50%;
+  rotate: -90deg;
+  left: 1rem;
+  
   transform: translateX(-50%);
   display: flex;
   gap: 0.5rem;
@@ -146,6 +146,11 @@
 @media (max-width: 768px) {
   .carousel-dots {
     bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
   }
   
   .carousel-dot {
