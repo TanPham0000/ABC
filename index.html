@@ -7,6 +7,7 @@
     <title>A BIGGER CIRCLE</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/overlay.css">
+    <link rel="stylesheet" href="./css/carousel.css">
     <link rel="icon" href="assets/favicon.ico">
   </head>
   <body>
@@ -33,12 +34,12 @@
                   </li>
                   <li class="social-grid-container">
                     <ul class="social-grid">
-                      <li><a href="https://tiktok.com/@abiggercircle" class="social-link" aria-label="TikTok"><img src="assets/icons-Ultramarine/tiktok.svg" alt=""></a></li>
-                      <li><a href="https://instagram.com/abiggercircle" class="social-link" aria-label="Instagram"><img src="assets/icons-Ultramarine/instagram.svg" alt=""></a></li>
-                      <li><a href="https://linkedin.com/company/abiggercircle" class="social-link" aria-label="LinkedIn"><img src="assets/icons-Ultramarine/linkedIn.svg" alt=""></a></li>
-                      <li><a href="mailto:contact@abiggercircle.com" class="social-link" aria-label="Email us"><img src="assets/icons-Ultramarine/email.svg" alt=""></a></li>
-                      <li><a href="https://x.com/abiggercircle" class="social-link" aria-label="notTwitter"><img src="assets/icons-Ultramarine/website.svg" alt=""></a></li>
-                      <li><a href="https://wa.me/1234567890" class="social-link" aria-label="WhatsApp"><img src="assets/icons-Ultramarine/whatsapp.svg" alt=""></a></li>
+                      <li><a href="https://tiktok.com/@abiggercircle" class="social-link" aria-label="TikTok" target="_blank"><img src="assets/icons-Ultramarine/tiktok.svg" alt=""></a></li>
+                      <li><a href="https://instagram.com/abiggercircle" class="social-link" aria-label="Instagram" target="_blank"><img src="assets/icons-Ultramarine/instagram.svg" alt=""></a></li>
+                      <li><a href="https://linkedin.com/company/abiggercircle" class="social-link" aria-label="LinkedIn" target="_blank"><img src="assets/icons-Ultramarine/linkedIn.svg" alt=""></a></li>
+                      <li><a href="mailto:contact@abiggercircle.com" class="social-link" aria-label="Email us" target="_blank"><img src="assets/icons-Ultramarine/email.svg" alt=""></a></li>
+                      <li><a href="https://x.com/abiggercircle" class="social-link" aria-label="notTwitter" target="_blank"><img src="assets/icons-Ultramarine/website.svg" alt=""></a></li>
+                      <li><a href="https://wa.me/1234567890" class="social-link" aria-label="WhatsApp" target="_blank"><img src="assets/icons-Ultramarine/whatsapp.svg" alt=""></a></li>
                     </ul>
                   </li>
                 </ul>
@@ -48,24 +49,70 @@
       </section>      
 
       <section class="right">
-        <figure class="hero-image">
-          <img src="assets/mainimg.jpg" alt="Brand visual" loading="eager">
-          <figcaption>
-            <h2>We went on a one week
-              workation to Crete</h2>
-            <p>
-              In what we can now officially call a tradition, the team at
-              A Bigger Circle goes on workation together every year.
-            </p>
-            <button class="read-more" id="openOverlay" data-overlay-target="crete-overlay">Read more</button>
-          </figcaption>
-        </figure>
-        <nav class="nav-arrows" aria-label="Scroll navigation">
-          <button aria-label="Scroll up" id="scrollUp">↑</button>
-          <button aria-label="Scroll down" id="scrollDown">↓</button>
-        </nav>
-      </section>
+          <div class="carousel-track" id="carouselTrack">
+            <!-- Slide 1 -->
+            <figure class="carousel-slide">
+              <img src="assets/mainimg.jpg" alt="Brand visual" loading="eager">
+              <figcaption>
+                <h2>We went on a one week workation to Crete</h2>
+                <p>In what we can now officially call a tradition, the team at A Bigger Circle goes on workation together every year.</p>
+                <button class="read-more" id="openOverlay" data-overlay-target="crete-overlay">Read more</button>
+              </figcaption>
+            </figure> 
+          
+            <!-- Slide 2 -->
+            <figure class="carousel-slide">
+              <img src="./assets/carousel/partymix.png" alt="Brand visual" loading="eager">
+              <figcaption>
+                <h2>Celebrating milestones with a party mix</h2>
+                <p>Our team knows how to celebrate achievements with style and creativity.</p>
+                <button class="read-more" id="openOverlay" data-overlay-target="crete-overlay">Read more</button>
+              </figcaption>
+            </figure> 
+
+            <!-- Slide 3 -->
+            <figure class="carousel-slide">
+              <img src="assets/mainimg.jpg" alt="Brand visual" loading="eager">
+              <figcaption>
+                <h2>Exploring new horizons together</h2>
+                <p>Every year, we embark on a journey to strengthen our bond and spark innovation.</p>
+                <button class="read-more" id="openOverlay" data-overlay-target="crete-overlay">Read more</button>
+              </figcaption>
+            </figure> 
+              
+             <!-- Slide 4 -->
+             <figure class="carousel-slide">
+              <img src="assets/mainimg.jpg" alt="Brand visual" loading="eager">
+              <figcaption>
+                <h2>Exploring new horizons together</h2>
+                <p>Every year, we embark on a journey to strengthen our bond and spark innovation.</p>
+                <button class="read-more" id="openOverlay" data-overlay-target="crete-overlay">Read more</button>
+              </figcaption>
+            </figure> 
+
+             <!-- Slide 5 -->
+             <figure class="carousel-slide">
+              <img src="assets/carousel/slide1.jpg" alt="Brand visual" loading="eager">
+              <figcaption>
+                <h2>Exploring new horizons together</h2>
+                <p>Every year, we embark on a journey to strengthen our bond and spark innovation.</p>
+                <button class="read-more" id="openOverlay" data-overlay-target="crete-overlay">Read more</button>
+              </figcaption>
+            </figure> 
+        <!-- Add more slides as needed -->
+          </div>
       
+          <!-- Carousel Ticker -->
+          <div class="carousel-dots" id="carouselDots">
+            <!-- Dots will be generated by JavaScript -->
+          </div>
+
+          <!-- Navigation Buttons -->
+          <nav class="nav-arrows" aria-label="Scroll navigation">
+            <button class="carousel-btn up" aria-label="Previous slide" id="prevBtn">↑</button>
+            <button class="carousel-btn down" aria-label="Next slide" id="nextBtn">↓</button>
+          </nav>
+      </section>
       <!-- Overlay Container -->
       <section class="overlay" id="crete-overlay">
         <div class="overlay-split">
@@ -95,6 +142,7 @@
       </section>
         
     </main>
+    <script src="js/carousel.js"></script>
     <script src="js/overlay.js"></script>
   </body>
 </html>

@@ -1,45 +1,45 @@
 .overlay {
-    position: fixed; /* Sit on top of the page */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-    z-index: 1000; /* Sit on top */
-    display: none; /* Hidden by default */
-    justify-content: center;
-    align-items: center;
+  position: fixed; /* Sit on top of the page */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 1000; /* Sit on top */
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay.active {
-    display: block;
-    opacity: 1;
-    animation-duration: 1s;
-    animation-name: slide-in;
+  display: block;
+  opacity: 1;
+  animation-duration: 1s;
+  animation-name: slide-in;
 }
 
 .overlay.closing {
-    animation: slide-out 1s forwards;
+  animation: slide-out 1s forwards;
 }
 
 /* Keyframes for slide-in */
 @keyframes slide-in {
-    from {
-        transform: translateX(150vw);
-    }
-    to {
-        transform: translateX(0);
-    }
+  from {
+      transform: translateX(150vw);
+  }
+  to {
+      transform: translateX(0);
+  }
 }
 
 /* Keyframes for slide-out */
 @keyframes slide-out {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(150vw);
-    }
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(150vw);
+  }
 }
 
 .overlay-split {
@@ -48,14 +48,14 @@
 }
 
 .overlay-left {
-    background-color: var(--primary);
-    color: var(--secondary);
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 2rem 3rem;
-    position: relative;
+  background-color: var(--primary);
+  color: var(--secondary);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  position: relative;
 }
 
 .overlay-header {
@@ -115,16 +115,14 @@
 .social-icons {
   display: flex;
   gap: 0.5rem;
- 
 }
 
 .overlay-right {
-    position: relative;
-    background-color: var(--secondary);
+  position: relative;
+  background-color: var(--secondary);
   width: 50%;
   height: 100%;
   overflow: hidden;
-
 }
 
 .overlay-right img {
