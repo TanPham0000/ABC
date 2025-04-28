@@ -372,9 +372,15 @@ address{
 }
 
 @media (max-width: 480px) {
+
+  .left {
+    padding: 1rem;
+  }
+
   .social-nav {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0em;
   }
   
   .left-text {
@@ -395,5 +401,12 @@ address{
 
   .nav-arrows {
     display: none;
+  }
+
+  h1 {
+    font-size: 62px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }

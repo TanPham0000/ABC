@@ -132,11 +132,15 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Touch/mouse drag functions
   function dragStart(e) {
-    e.preventDefault();
+    // Only prevent default if starting touch is directly on the carousel track
+    if (e.target === carouselTrack) {
+      e.preventDefault();
+    }
+    
     startTime = new Date().getTime();
     pauseAutoSlide();
     
-    // Get starting position (use clientX for horizontal swiping)
+    // Get starting position
     startPos = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
     
     isDragging = true;
