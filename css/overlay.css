@@ -104,8 +104,9 @@
   border-radius: 10px;
 }
 
-.overlay-footer {
-  font-size: 0.875rem;
+.overlay-footer address {
+  font-size: 	0.75rem;
+  color: var(--secondary);  
   display: flex;
   justify-content: space-between;
   align-items: center;

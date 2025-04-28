@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
   let isDragging = false;
   let animationID = 0;
   let startTime = 0;
+  let autoSlideInterval = 5000; // 5 seconds between slides
+  let autoSlideTimer; // Timer reference for auto-sliding
+  let isScrolling = false; // Flag to prevent multiple wheel triggers
+  let scrollTimeout; // Timeout for wheel event throttling
   
   // Create dots based on number of slides
   function createDots() {
@@ -48,6 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Set up touch and mouse events
     setupDraggable();
+    setupWheelEvents();
+    
+    // Start auto-sliding
+    startAutoSlide();
   }
   
   // Function to show a specific slide
@@ -62,6 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update dots
     updateDots();
+    
+    // Reset the auto-slide timer whenever a slide changes
+    resetAutoSlideTimer();
   }
   
   // Function to go to a specific slide
@@ -82,6 +93,62 @@ document.addEventListener('DOMContentLoaded', function() {
     showSlide(currentIndex);
   }
   
+  // Set up mouse wheel events
+  function setupWheelEvents() {
+    carouselTrack.addEventListener('wheel', handleWheel, { passive: false });
+  }
+  
+  // Handle mouse wheel events
+  function handleWheel(e) {
+    // Prevent page scrolling
+    e.preventDefault();
+    
+    // If already processing a scroll event, return
+    if (isScrolling) return;
+    
+    // Set scrolling flag to true
+    isScrolling = true;
+    
+    // Determine scroll direction
+    if (e.deltaY > 0) {
+      // Scrolling down
+      prevSlide();
+    } else {
+      // Scrolling up
+      nextSlide();
+    }
+    
+    // Clear any existing timeout
+    clearTimeout(scrollTimeout);
+    
+    // Set a timeout to reset the scrolling flag
+    // This prevents rapid successive wheel events
+    scrollTimeout = setTimeout(() => {
+      isScrolling = false;
+    }, 500); // Throttle wheel events to one every 500ms
+  }
+  
+  // Start auto-sliding
+  function startAutoSlide() {
+    autoSlideTimer = setInterval(() => {
+      nextSlide();
+    }, autoSlideInterval);
+  }
+  
+  // Reset the auto-slide timer
+  function resetAutoSlideTimer() {
+    // Clear the existing timer
+    clearInterval(autoSlideTimer);
+    
+    // Start a new timer
+    startAutoSlide();
+  }
+  
+  // Stop auto-sliding (used when user interacts with carousel)
+  function pauseAutoSlide() {
+    clearInterval(autoSlideTimer);
+  }
+  
   // Set up draggable functionality
   function setupDraggable() {
     // Touch Events
@@ -99,6 +166,9 @@ document.addEventListener('DOMContentLoaded', function() {
   function dragStart(e) {
     e.preventDefault();
     startTime = new Date().getTime();
+    
+    // Pause auto-slide during user interaction
+    pauseAutoSlide();
     
     // Get starting positions
     if (e.type === 'touchstart') {
@@ -143,6 +213,9 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (movedDistance > 50 || (movedDistance > 0 && moveTime < 300)) {
       // Dragged up - go to previous slide
       prevSlide();
+    } else {
+      // If no significant movement, restart auto-slide
+      resetAutoSlideTimer();
     }
     
     // Reset values
@@ -157,9 +230,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
+  // Pause auto-slide when user hovers over carousel
+  carouselTrack.addEventListener('mouseenter', pauseAutoSlide);
+  
+  // Resume auto-slide when user leaves carousel
+  carouselTrack.addEventListener('mouseleave', resetAutoSlideTimer);
+  
   // Event listeners for navigation buttons
-  prevBtn.addEventListener('click', prevSlide);
-  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    // No need to reset timer here as showSlide() will do it
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    // No need to reset timer here as showSlide() will do it
+  });
   
   // Initialize the carousel
   initCarousel();
@@ -169,6 +255,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   openOverlayButtons.forEach(button => {
     button.addEventListener('click', function() {
+      // Pause auto-slide when overlay is open
+      pauseAutoSlide();
+      
       const targetOverlay = this.getAttribute('data-overlay-target');
       const overlay = document.getElementById(targetOverlay);
       
@@ -192,15 +281,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const overlay = this.closest('.more-content');
       if (overlay) {
         overlay.classList.remove('active');
+        // Resume auto-slide when overlay is closed
+        resetAutoSlideTimer();
       }
     });
   });
-  
-  // Auto-advance carousel (optional)
-  // Uncomment this if you want auto-sliding
-
-  const autoSlideInterval = 5000; // 5 seconds
-  setInterval(() => {
-    nextSlide();
-  }, autoSlideInterval);
 });
