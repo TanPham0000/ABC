@@ -66,7 +66,7 @@
   left: 2rem;
   padding: 1.5rem;
   text-align: end;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(1px);
   border-radius: 1rem;
   transition: var(--transition);
   z-index: 2;
@@ -74,7 +74,9 @@
 
 .carousel-slide h2 {
   margin-bottom: 1rem;
-  font-family: 'Obviously Condensed Bold', sans-serif;
+  font-family: 'Obviously condensed bold', sans-serif;
+  line-height: 45px;
+  letter-spacing: 0.1rem;
   font-size: 2rem;
 }
 
@@ -157,5 +159,19 @@
   .carousel-dot {
     width: 8px;
     height: 8px;
+  }
+
+  .nav-arrows {
+    display: none; /* Hide arrows on mobile */
+  }
+
+  .carousel-slide figcaption {
+    text-align: center; 
+    left: 0;
+    bottom: 15%;
+  }
+
+  .carousel-slide h2 {
+    font-size: 3rem;
   }
 }

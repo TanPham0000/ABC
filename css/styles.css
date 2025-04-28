@@ -23,7 +23,6 @@
   font-style: normal;
 }
 
-
 :root {
   --primary: #1108BB;
   --secondary: #FFF9EE;
@@ -40,6 +39,7 @@
   text-decoration: none;
   list-style: none;
   line-break: normal;
+  font-style: normal;
 }
 
 html, body {
@@ -47,7 +47,6 @@ html, body {
   height: 100%;
   overflow-x: hidden;
   font-family: 'Obviously Regular', sans-serif;
-  font-style: normal;
 }
 
 
@@ -86,8 +85,7 @@ header {
 }
 
 .logo {
-  height: 5rem;
-  width: 100%;
+  height: clamp(5rem, 2rem, 4rem);
   transition: var(--transition);
 }
 
@@ -227,7 +225,7 @@ address{
   color: var(--secondary);
   background: transparent;
   border: 1px solid var(--secondary);
-  border-radius: 30px;
+  border-radius: 10px;
   transition: var(--transition);
 }
 
@@ -338,6 +336,7 @@ address{
   
   .inner-container {
     height: 100%;
+    justify-content: space-around;
   }
 
   .social-grid {

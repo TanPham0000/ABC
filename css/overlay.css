@@ -66,6 +66,7 @@
 
 .overlay-header .logo {
   height: 3rem;
+  justify-content: start;
 }
 
 .overlay-header .close {
