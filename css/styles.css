@@ -72,8 +72,8 @@ h2 {
 /* ===== Layout ===== */
 main{
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 /* ===== Header ===== */
@@ -306,9 +306,7 @@ address{
   .word {
     display: inline; /* Each word goes onto its own line */
   }
-  .left {
-    margin-top: 42px;
-  }
+
   .left, .right {
     flex: none;
     height: 50vh;
