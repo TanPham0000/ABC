@@ -52,7 +52,7 @@
 }
 
 .carousel-track {
-  cursor: grab;
+  cursor: grab; /* Cursor for dragging */
 }
 
 .carousel-track.dragging {
@@ -114,6 +114,8 @@
   background: var(--secondary);
   color: var(--primary);
 }
+
+/* Dot styles */
 
 .carousel-dots {
   position: absolute;

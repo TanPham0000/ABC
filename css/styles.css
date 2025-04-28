@@ -47,6 +47,7 @@ html, body {
   height: 100%;
   overflow-x: hidden;
   font-family: 'Obviously Regular', sans-serif;
+  font-style: normal;
 }
 
 
@@ -130,6 +131,8 @@ header {
 }
 
 .social-list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -194,11 +197,6 @@ address{
   font-size: 	clamp(0.75rem, 0.75rem, 0.75rem);
   line-height: 1.4;
   color: var(--primary);
-}
-
-address p { 
-  font-family: 'obviously', sans-serif;
-  font-style: normal;
 }
 
 .left-text p:nth-child(1) { animation-delay: 0.3s; }
@@ -308,7 +306,9 @@ address p {
   .word {
     display: inline; /* Each word goes onto its own line */
   }
-  
+  .left {
+    margin-top: 42px;
+  }
   .left, .right {
     flex: none;
     height: 50vh;
@@ -339,15 +339,19 @@ address p {
   }
   
   .inner-container {
-    height: 70%;
-    justify-content: center;
-    gap: 2rem;
+    height: 100%;
   }
 
   .social-grid {
     grid-template-rows: 1fr; /* 1 column for mobile */
     grid-template-columns: repeat(6, 1fr); /* 3 rows for mobile */
   }
+
+  .social-list {
+    flex-direction: row;
+    gap: 4px;
+  }
+  
   .social-nav {
     align-items: center; /* Center the icons on mobile */
     flex-direction: column-reverse;  /* Stack the icons vertically */
