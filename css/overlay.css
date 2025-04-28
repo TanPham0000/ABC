@@ -1,12 +1,13 @@
+/* ===== Overlay Base ===== */
 .overlay {
-  position: fixed; /* Sit on top of the page */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-  z-index: 1000; /* Sit on top */
-  display: none; /* Hidden by default */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -22,26 +23,18 @@
   animation: slide-out 1s forwards;
 }
 
-/* Keyframes for slide-in */
+/* ===== Animations ===== */
 @keyframes slide-in {
-  from {
-      transform: translateX(150vw);
-  }
-  to {
-      transform: translateX(0);
-  }
+  from { transform: translateX(150vw); }
+  to { transform: translateX(0); }
 }
 
-/* Keyframes for slide-out */
 @keyframes slide-out {
-  from {
-      transform: translateX(0);
-  }
-  to {
-      transform: translateX(150vw);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(150vw); }
 }
 
+/* ===== Overlay Layout ===== */
 .overlay-split {
   display: flex;
   height: 100%;
@@ -58,6 +51,21 @@
   position: relative;
 }
 
+.overlay-right {
+  position: relative;
+  background-color: var(--secondary);
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.overlay-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Overlay Content ===== */
 .overlay-header {
   display: flex;
   justify-content: space-between;
@@ -105,8 +113,9 @@
   border-radius: 10px;
 }
 
+/* ===== Social Navigation ===== */
 .social-nav address {
-  font-size: 	0.75rem;
+  font-size: 0.75rem;
   color: var(--secondary);  
   display: flex;
   justify-content: space-between;
@@ -119,22 +128,7 @@
   gap: 0.5rem;
 }
 
-.overlay-right {
-  position: relative;
-  background-color: var(--secondary);
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.overlay-right img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
-/* ===== Responsive ===== */
+/* ===== Responsive Styles ===== */
 @media (max-width: 768px) {
   .overlay-split {
     flex-direction: column;
