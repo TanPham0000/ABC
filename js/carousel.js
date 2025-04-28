@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let isDragging = false;
   let animationID = 0;
   let startTime = 0;
-  let autoSlideInterval = 5000; // 5 seconds between slides
+  let autoSlideInterval = 10000; // 10 seconds between slides
   let autoSlideTimer;
   let isScrolling = false;
   let scrollTimeout;

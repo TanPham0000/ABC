@@ -317,6 +317,7 @@ address{
 
   .logo-mobile {
     display: block;
+    height: 4rem;
   }
 
   .logo-desktop {
@@ -337,6 +338,7 @@ address{
   .inner-container {
     height: 100%;
     justify-content: space-around;
+    gap: 10px;
   }
 
   .social-grid {
@@ -389,5 +391,9 @@ address{
   
   .hero-image p {
     font-size: 0.9rem;
+  }
+
+  .nav-arrows {
+    display: none;
   }
 }
