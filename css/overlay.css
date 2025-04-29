@@ -15,12 +15,12 @@
 .overlay.active {
   display: block;
   opacity: 1;
-  animation-duration: 1s;
-  animation-name: slide-in;
+  /* animation-duration: 1s;
+  animation-name: slide-in; */
 }
 
 .overlay.closing {
-  animation: slide-out 1s forwards;
+  /* animation: slide-out 1s forwards; */
 }
 
 /* ===== Animations ===== */
@@ -113,7 +113,7 @@
   border-radius: 10px;
   color: var(--primary);
   text-align: center;
-  font-family: 'Obviously Bold', sans-serif;
+  font-family: 'Obviously', sans-serif;
   font-size: 1.2rem;
   transition: all 0.3s ease;
   display: block;
