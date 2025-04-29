@@ -75,14 +75,14 @@
 .carousel-slide h2 {
   margin-bottom: 1rem;
   font-family: 'Obviously condensed bold', sans-serif;
-  line-height: 45px;
-  letter-spacing: 0.1rem;
-  font-size: 2rem;
+  line-height: 52px;
+  letter-spacing: 0.2rem;
+  font-size: 3.5rem;
 }
 
 .carousel-slide p {
   margin-bottom: 1.2rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.4;
 }
 

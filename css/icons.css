@@ -146,5 +146,6 @@ svg {
         flex-wrap: wrap;
         justify-content: center;
         gap: 0;
+        align-content: center;
     }
 }

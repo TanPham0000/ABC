@@ -20,7 +20,7 @@
 }
 
 .overlay.closing {
-  /* animation: slide-out 1s forwards; */
+  animation: slide-out 1s forwards; 
 }
 
 /* ===== Animations ===== */
@@ -129,7 +129,6 @@
 /* ===== Social Navigation ===== */
 .social-nav address {
   font-size: 0.75rem;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -141,7 +140,7 @@
   .overlay-split {
     flex-direction: column;
   }
-
+  
   .overlay-left {
     width: 100vw;
     height: 100%;
