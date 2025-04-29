@@ -73,7 +73,7 @@
 }
 
 .overlay-header .logo {
-  height: 3rem;
+  height: 5rem;
   justify-content: start;
 }
 
@@ -86,46 +86,54 @@
 }
 
 .overlay-body {
-  flex-grow: 1;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
 }
 
 .overlay-body h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
 }
 
 .overlay-body p {
   font-size: 1rem;
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
 }
 
 .overlay-body .contact-button {
-  padding: 0.8rem 1.6rem;
-  border: 2px solid var(--secondary);
-  background: none;
-  color: var(--secondary);
-  cursor: pointer;
-  font-size: 1rem;
-  margin-top: 1.5rem;
+  align-self: center;
+  padding: 1rem 3rem;
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 300px;
   border-radius: 10px;
+  color: var(--primary);
+  text-align: center;
+  font-family: 'Obviously Bold', sans-serif;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.overlay-body .contact-button:hover,
+.overlay-body .contact-button:active {
+  background-color: var(--secondary);
+  color: var(--primary);
+  transform: scale(1.05);
 }
 
 /* ===== Social Navigation ===== */
 .social-nav address {
   font-size: 0.75rem;
-  color: var(--secondary);  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 2rem;
-}
-
-.social-icons {
-  display: flex;
-  gap: 0.5rem;
 }
 
 /* ===== Responsive Styles ===== */
@@ -135,12 +143,11 @@
   }
 
   .overlay-left {
-    width: 100%;
-    height: 50%;
+    width: 100vw;
+    height: 100%;
   }
 
   .overlay-right {
-    width: 100%;
-    height: 50%;
+    display: none;    
   }
 }
