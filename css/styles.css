@@ -76,7 +76,8 @@ h2 {
 
 address {
   font-size: 0.75rem;
-  line-height: 1.4;
+  line-height: 1.5;
+  letter-spacing: 0.4em;
   color: var(--primary);
 }
 
@@ -122,8 +123,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  padding: 42px;
+  width: 55%;
   background-color: var(--secondary);
   position: relative;
   overflow: hidden;
@@ -133,7 +133,9 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 42px;
   height: 100%;
+  width: 100%;
 }
 
 .bottom-container {
@@ -146,7 +148,7 @@ header {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 55%;
   align-items: center;
   overflow: hidden;
   background-color: var(--primary);
