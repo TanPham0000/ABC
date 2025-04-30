@@ -203,7 +203,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const targetOverlay = this.getAttribute('data-overlay-target');
         const overlay = document.getElementById(targetOverlay) || 
                        document.querySelector('.more-content');
-        
         if (overlay) overlay.classList.add('active');
       });
     });
@@ -219,7 +218,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
-  
   // Initialize the carousel
   initCarousel();
 });

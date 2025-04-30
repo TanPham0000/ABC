@@ -63,7 +63,7 @@
 .carousel-slide figcaption {
   position: absolute;
   bottom: 2rem;
-  left: 2rem;
+  right: 1%;
   padding: 1.5rem;
   text-align: end;
   backdrop-filter: blur(1px);
@@ -74,10 +74,8 @@
 
 .carousel-slide h2 {
   margin-bottom: 1rem;
-  font-family: 'Obviously condensed bold', sans-serif;
   line-height: 52px;
-  letter-spacing: 0.2rem;
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 .carousel-slide p {
@@ -90,10 +88,10 @@
 .nav-arrows {
   position: absolute;
   right: 1rem;
-  top: 50%;
+  top: 4.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   transform: translateY(-50%);
   z-index: 5;
 }
@@ -101,27 +99,27 @@
 .carousel-btn {
   width: 2.5rem;
   height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  color: var(--secondary);
-  background: var(--overlay);
-  border: none;
   border-radius: 50%;
-  transition: var(--transition);
   cursor: pointer;
+  
 }
 
-.carousel-btn:hover {
+#nextBtn, #prevBtn {
+  background: transparent;
+  
+  border: 2px solid var(--secondary);
+  transition: var(--transition);
+}
+
+#nextBtn:hover, #prevBtn:hover {
   background: var(--secondary);
   color: var(--primary);
+  mix-blend-mode: screen;
 }
-
 /* ===== Carousel Dots ===== */
 .carousel-dots {
   position: absolute;
-  rotate: -90deg;
+  rotate: 90deg;
   left: 1rem;
   transform: translateX(-50%);
   display: flex;

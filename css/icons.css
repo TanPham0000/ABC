@@ -33,10 +33,10 @@
 /* Social Link Adjustments */
 .social-link {
   display: flex;
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
   transition: var(--transition);
 }
 
@@ -55,8 +55,8 @@ svg {
 /* Info icon specific styling */
 .info-icon {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background-color: var(--primary);
   display: flex;

@@ -72,8 +72,8 @@
   align-items: start;
 }
 
-.overlay-header .logo {
-  height: 5rem;
+.logo-desktop, .logo-mobile {
+  height: 6rem;
   justify-content: start;
 }
 
@@ -113,7 +113,8 @@
   border-radius: 10px;
   color: var(--primary);
   text-align: center;
-  font-family: 'Obviously', sans-serif;
+  background-color: var(--secondary);
+  font-family: 'Obviously semibold', sans-serif;
   font-size: 1.2rem;
   transition: all 0.3s ease;
   display: block;

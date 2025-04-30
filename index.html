@@ -138,7 +138,7 @@
               <figcaption>
                 <h2>Exploring new horizons together</h2>
                 <p>Every year, we embark on a journey to strengthen our bond and spark innovation.</p>
-                <button class="read-more" id="openOverlay" data-overlay-target="crete-overlay3">Read more</button>
+                <button class="read-more" id="openOverlay" data-overlay-target="crete-overlay3">Show me more!</button>
               </figcaption>
             </figure> 
 
@@ -160,40 +160,161 @@
 
           <!-- Navigation Buttons -->
           <nav class="nav-arrows" aria-label="Scroll navigation">
-            <button class="carousel-btn up" aria-label="Next slide" id="nextBtn">↑</button>
-            <button class="carousel-btn down" aria-label="Previous slide" id="prevBtn">↓</button>
+            <button class="carousel-btn up" aria-label="Previous slide" id="prevBtn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 54"><circle cx="27" cy="27" r="26" stroke-width="2"/><path fill="#FFF9EE" d="M27.7 18a1 1 0 0 0-1.4 0l-6.37 6.37a1 1 0 0 0 1.41 1.41L27 20.13l5.66 5.65a1 1 0 0 0 1.41-1.41l-6.36-6.36ZM27 35h1V18.71h-2V35h1Z"/></svg></button>
+            <button class="carousel-btn down" aria-label="Next slide" id="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 54"><circle cx="27" cy="27" r="26" stroke-width="2" transform="rotate(180 27 27)"/><path fill="#FFF9EE" d="M26.3 36a1 1 0 0 0 1.4 0l6.37-6.37a1 1 0 0 0-1.41-1.41L27 33.87l-5.66-5.65a1 1 0 0 0-1.41 1.41l6.36 6.36Zm.7-17h-1v16.29h2V19h-1Z"/></svg></button>
           </nav>
       </section>
 
       <!-- Overlay Container -->
-      <section class="overlay" id="crete-overlay">
-        <div class="overlay-split">
-          <!-- LEFT PANEL -->
-          <section class="overlay-left">
-            <div class="overlay-header">
-              <img src="../assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
-              <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
-              <button class="close" id="closeBtn" aria-label="Close overlay">×</button>
-            </div>
-            <div class="overlay-body">
-              <h2>Perhaps, pickles have a pontificating part to play</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <button class="contact-button">Contact us</button>
-            </div>
-            <nav class="social-nav">
-              <address>
-                <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
-              </address>
-              
-            </nav>
-          </section>
-      
-          <!-- RIGHT PANEL -->
-          <section class="overlay-right">
-            <img src="./assets/team.jpg" alt="Team photo">
-          </section>
-        </div>
+      <!-- Overlay for "Crete" -->
+<section class="overlay" id="crete-overlay">
+  <div class="overlay-split">
+    <!-- LEFT PANEL -->
+    <section class="overlay-left">
+      <div class="overlay-header">
+        <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
+        <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
+        <button class="close" aria-label="Close overlay">×</button>
+      </div>
+      <div class="overlay-body">
+        <h2>Our Workation to Crete</h2>
+        <p>In what we can now officially call a tradition, the team at A Bigger Circle goes on workation together every year. This year, we chose the beautiful island of Crete to combine productive work sessions with team-building activities and relaxation.</p>
+        <p>During our stay, we held daily workshops focused on our upcoming projects, brainstormed new service offerings, and enjoyed the local cuisine and beaches. These workations have proven invaluable for strengthening our team bonds and sparking innovation.</p>
+        <button class="contact-button">Contact us</button>
+      </div>
+      <nav class="social-nav">
+        <address>
+          <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
+        </address>
+      </nav>
+    </section>
+    
+    <!-- RIGHT PANEL -->
+    <section class="overlay-right">
+      <img src="./assets/team.jpg" alt="Team photo in Crete">
+    </section>
+  </div>
+</section>
+
+<!-- Overlay for "Party Mix" -->
+<section class="overlay" id="partymix">
+  <div class="overlay-split">
+    <!-- LEFT PANEL -->
+    <section class="overlay-left">
+      <div class="overlay-header">
+        <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
+        <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
+        <button class="close" aria-label="Close overlay">×</button>
+      </div>
+      <div class="overlay-body">
+        <h2>Celebrating Milestones with a Party Mix</h2>
+        <p>At A Bigger Circle, we believe in celebrating our achievements together. Our team organized a special party mix event to commemorate reaching several important milestones this year.</p>
+        <p>The celebration included a curated playlist, custom cocktails named after our successful projects, and a slideshow highlighting our journey. These moments of celebration are crucial for maintaining our positive company culture and acknowledging everyone's hard work.</p>
+        <button class="contact-button">Join our next celebration</button>
+      </div>
+      <nav class="social-nav">
+        <address>
+          <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
+        </address>
+      </nav>
+    </section>
+    
+    <!-- RIGHT PANEL -->
+    <section class="overlay-right">
+      <img src="./assets/carousel/partymix.png" alt="Party mix celebration">
+    </section>
+  </div>
+</section>
+
+<!-- Overlay for "Exploring New Horizons" -->
+<section class="overlay" id="crete-overlay2">
+  <div class="overlay-split">
+    <!-- LEFT PANEL -->
+    <section class="overlay-left">
+      <div class="overlay-header">
+        <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
+        <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
+        <button class="close" aria-label="Close overlay">×</button>
+      </div>
+      <div class="overlay-body">
+        <h2>Exploring New Horizons Together</h2>
+        <p>Every year, we embark on a journey to strengthen our bond and spark innovation. These trips are more than just team-building exercises; they're opportunities to see our work from new perspectives and gain fresh insights.</p>
+        <p>During our latest exploration, we discovered new approaches to audience intelligence that we're excited to implement in our upcoming projects. These shared experiences create lasting memories and deepen our collaborative spirit.</p>
+        <button class="contact-button">Learn about our approach</button>
+      </div>
+      <nav class="social-nav">
+        <address>
+          <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
+        </address>
+      </nav>
+    </section>
+    
+    <!-- RIGHT PANEL -->
+    <section class="overlay-right">
+      <img src="./assets/mainimg.jpg" alt="Team exploring new horizons">
+    </section>
+  </div>
+</section>
+
+<!-- Overlay for "Show Me More" -->
+<section class="overlay" id="crete-overlay3">
+  <div class="overlay-split">
+    <!-- LEFT PANEL -->
+    <section class="overlay-left">
+      <div class="overlay-header">
+        <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
+        <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
+        <button class="close" aria-label="Close overlay">×</button>
+      </div>
+      <div class="overlay-body">
+        <h2>Behind the Scenes at A Bigger Circle</h2>
+        <p>Want to learn more about how we work? Our team combines expertise in brand strategy, audience intelligence, and creative communication to help brands become part of meaningful conversations.</p>
+        <p>We believe that the most successful brands are those that understand their audience deeply and engage in authentic conversations. Our approach is built on data-driven insights combined with creative storytelling techniques.</p>
+        <button class="contact-button">Get in touch</button>
+      </div>
+      <nav class="social-nav">
+        <address>
+          <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
+        </address>
+      </nav>
+    </section>
+    
+    <!-- RIGHT PANEL -->
+    <section class="overlay-right">
+      <img src="./assets/mainimg.jpg" alt="Behind the scenes">
+    </section>
+  </div>
+</section>
+
+<!-- Overlay for "Vogue" -->
+<section class="overlay" id="vogue">
+  <div class="overlay-split">
+    <!-- LEFT PANEL -->
+    <section class="overlay-left">
+      <div class="overlay-header">
+        <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
+        <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
+        <button class="close" aria-label="Close overlay">×</button>
+      </div>
+      <div class="overlay-body">
+        <h2>Our Feature in Design Publications</h2>
+        <p>We're excited to share that our recent branding work has been featured in several prestigious design publications. This recognition highlights our commitment to innovative visual storytelling and effective brand communication.</p>
+        <p>Our approach combines cutting-edge design thinking with strategic insights about audience behavior and preferences. The result is branding that not only looks beautiful but also creates meaningful connections.</p>
+        <button class="contact-button">See our portfolio</button>
+      </div>
+      <nav class="social-nav">
+        <address>
+          <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
+        </address>
+      </nav>
+    </section>
+    
+    <!-- RIGHT PANEL -->
+    <section class="overlay-right">
+      <img src="./assets/carousel/slide1.jpg" alt="Design publication feature">
+    </section>
+  </div>
+</section>
       </section>
         
     </main>
