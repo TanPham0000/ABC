@@ -11,7 +11,13 @@
     <link rel="stylesheet" href="./css/icons.css">
     <link rel="icon" href="assets/favicon.ico">
   </head>
-  <body>
+  
+   <body>
+    <!-- SVG Sprite Sheet -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      
+    </svg>
+    
     <main class="container">
       <section class="left" aria-labelledby="conversation-title">
         <div class="inner-container">
@@ -33,17 +39,15 @@
               <div class="social-container">
                 <li class="info-icon-item">
                   <a href="/about" class="info-icon" aria-label="More information about us">
-                    <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M32.04 38h-4.07c.04-2.11.04-4.25.04-6.9 0-2.52-.02-4.39-.05-6.43h4.07c-.06 2-.06 3.78-.06 6.27v.57c0 2.82 0 4.49.07 6.49m.37-15.62c0 .66-.33 1.25-2.4 1.25-2.09 0-2.42-.59-2.42-1.25 0-.7.37-1.17 2.42-1.17 2.02 0 2.4.47 2.4 1.17" fill="currentColor"/>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 72 72"><circle cx="42" cy="42" r="42" fill="#1108BB"/><path fill="#FFF9EE" d="M42.476 62h-12.95c.14-6.72.14-13.51.14-21.98 0-7.98-.07-13.93-.14-20.44h12.95c-.21 6.37-.21 12.04-.21 19.95V41.35c0 8.96 0 14.28.21 20.65Zm1.19-49.7c0 2.1-1.05 3.99-7.63 3.99-6.65 0-7.7-1.89-7.7-3.99 0-2.24 1.19-3.71 7.7-3.71 6.44 0 7.63 1.47 7.63 3.71Z"/></svg>
                   </a>
                 </li>
                 <ul class="social-grid">
                   <!-- TikTok -->
                   <li>
                     <a href="https://tiktok.com/@abiggercircle" class="social-link" aria-label="TikTok" target="_blank">
-                      <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M39 26.1a5.3 5.3 0 0 1-4.93-2.4v8.22c0 3.36-2.7 6.08-6.04 6.08S22 35.28 22 31.93s2.7-6.08 6.04-6.08l.37.02v3c-.13-.02-.24-.05-.37-.05a3.09 3.09 0 0 0-3.08 3.1 3.09 3.09 0 0 0 3.08 3.11c1.7 0 3.2-1.35 3.2-3.07L31.27 18h2.85A5.33 5.33 0 0 0 39 22.77v3.32Z" fill="currentColor"/>
+                      <svg width="60" height="60">
+                        <use xlink:href="#tiktok-icon"></use>
                       </svg>
                     </a>
                   </li>
@@ -51,17 +55,18 @@
                   <!-- Instagram -->
                   <li>
                     <a href="https://instagram.com/abiggercircle" class="social-link" aria-label="Instagram" target="_blank">
-                      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48">
-                        <path d="M 16.5 5 C 10.16639 5 5 10.16639 5 16.5 L 5 31.5 C 5 37.832757 10.166209 43 16.5 43 L 31.5 43 C 37.832938 43 43 37.832938 43 31.5 L 43 16.5 C 43 10.166209 37.832757 5 31.5 5 L 16.5 5 z M 16.5 8 L 31.5 8 C 36.211243 8 40 11.787791 40 16.5 L 40 31.5 C 40 36.211062 36.211062 40 31.5 40 L 16.5 40 C 11.787791 40 8 36.211243 8 31.5 L 8 16.5 C 8 11.78761 11.78761 8 16.5 8 z M 34 12 C 32.895 12 32 12.895 32 14 C 32 15.105 32.895 16 34 16 C 35.105 16 36 15.105 36 14 C 36 12.895 35.105 12 34 12 z M 24 14 C 18.495178 14 14 18.495178 14 24 C 14 29.504822 18.495178 34 24 34 C 29.504822 34 34 29.504822 34 24 C 34 18.495178 29.504822 14 24 14 z M 24 17 C 27.883178 17 31 20.116822 31 24 C 31 27.883178 27.883178 31 24 31 C 20.116822 31 17 27.883178 17 24 C 17 20.116822 20.116822 17 24 17 z"></path>
-                        </svg>
+                      <svg width="60" height="60">
+                        <use xlink:href="#instagram-icon"></use>
+                      </svg> 
                     </a>
                   </li>
+                  
                   
                   <!-- LinkedIn -->
                   <li>
                     <a href="https://linkedin.com/company/abiggercircle" class="social-link" aria-label="LinkedIn" target="_blank">
-                      <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.33 26.64H26.5V40h-4.17V26.64ZM24.41 20a2.4 2.4 0 1 1 0 4.81 2.41 2.41 0 0 1-2.41-2.41A2.4 2.4 0 0 1 24.41 20Zm4.67 6.64h3.97v1.83h.05a4.35 4.35 0 0 1 3.92-2.17c4.19 0 4.97 2.77 4.97 6.37V40h-4.14v-6.5c0-1.55-.03-3.54-2.16-3.54-2.12 0-2.48 1.69-2.48 3.43V40h-4.14V26.64Z" fill="currentColor"/>
+                      <svg width="60" height="60">
+                        <use xlink:href="#linkedin-icon"></use>
                       </svg>
                     </a>
                   </li>
@@ -69,8 +74,8 @@
                   <!-- Email -->
                   <li>
                     <a href="mailto:contact@abiggercircle.com" class="social-link" aria-label="Email us" target="_blank">
-                      <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M30.07 20.98c4 0 5.37 2.9 5.37 8.78 0 5.66-.77 7.4-2.49 7.4-1.25 0-1.82-.67-1.84-2.2H31c-.22 1.18-.7 2.2-1.8 2.2-1.44 0-2.03-1.02-2.03-6.72 0-5.17.77-6.02 1.91-6.02.68 0 1.19.44 1.48 1.18l.1-.02-.02-.99c.36.02.73.05 1.08.05.24 0 .62 0 .97-.03-.07 1.57-.07 4.87-.07 9.18 0 .97.14 1.27.47 1.27.44 0 .7-.9.7-5.12 0-4.82-.57-7.24-3.7-7.24-3.08 0-3.91 2.18-3.91 7.4 0 2.24.26 4.74.77 6.66a8.7 8.7 0 0 0-1.8.4c-.45-2.1-.6-4.8-.6-7.22 0-6.18 1.54-8.96 5.52-8.96Zm-.86 9.38c0 4.09.25 4.57.7 4.57.43 0 .76-.44.76-2v-5.87a1.32 1.32 0 0 0-.6-.15c-.57 0-.86.4-.86 3.83Z" fill="currentColor"/>
+                      <svg width="60" height="60">
+                        <use xlink:href="#email-icon"></use>
                       </svg>
                     </a>
                   </li>
@@ -78,8 +83,8 @@
                   <!-- X (Twitter) -->
                   <li>
                     <a href="https://x.com/abiggercircle" class="social-link" aria-label="X" target="_blank">
-                      <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                        <path d="m33.27 38.54 4.37-16.98c.06-.23-.02-.44-.2-.53-.17-.08-.41-.03-.6.13L22.84 33.4c-.18.16-.28.4-.23.62.05.2.25.33.47.3l6.67-1.05 2.51 5.57a.38.38 0 0 0 .18.19c.1.05.23.06.36.01a.75.75 0 0 0 .47-.5Zm-2.65-6.18a.37.37 0 0 0-.17-.18.45.45 0 0 0-.27-.04l-5.44.84L36.25 22.93l-3.6 13.98-1.97-4.43-.06-.12Z" fill="currentColor"/>
+                      <svg width="60" height="60">
+                        <use xlink:href="#x-icon"></use>
                       </svg>
                     </a>
                   </li>
@@ -87,18 +92,16 @@
                   <!-- WhatsApp -->
                   <li>
                     <a href="https://wa.me/1234567890" class="social-link" aria-label="WhatsApp" target="_blank">
-                      <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                        <path d="m20 40 1.43-5.35A9.8 9.8 0 0 1 20.2 29.88a9.9 9.9 0 0 1 19.8 0 9.9 9.9 0 0 1-9.9 9.88 9.96 9.96 0 0 1-4.71-1.2L20 40Zm5.66-3.45.34.2a8.04 8.04 0 0 0 4.1 1.14c4.42 0 8.02-3.6 8.02-8.01a8.03 8.03 0 1 0-14.88 4.15l.22.34-.8 2.99 3-.8Z" fill="currentColor"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.78 31.25c-.4-.24-.93-.51-1.42-.31-.36.15-.6.72-.84 1.01-.12.16-.26.17-.45.1a6.4 6.4 0 0 1-3.2-2.74c-.13-.2-.11-.35.04-.54.23-.27.53-.57.58-.94.07-.37-.1-.79-.26-1.11-.2-.42-.4-1.01-.82-1.25-.38-.22-.89-.1-1.23.18a2.5 2.5 0 0 0-.86 1.98c0 .2.02.42.08.62.12.49.34.95.6 1.38.2.33.4.65.63.95a9.95 9.95 0 0 0 2.72 2.53c.53.33 1.1.61 1.7.8.67.23 1.26.46 1.98.32.75-.15 1.5-.61 1.8-1.34.09-.2.13-.45.08-.68-.1-.47-.74-.75-1.12-.97z" fill="currentColor"/>
+                      <svg width="60" height="60">
+                        <use xlink:href="#whatsapp-icon"></use>
                       </svg>
                     </a>
                   </li>
                 </ul> 
               </div>            
           </nav>
-
         </div>
-      </section>      
+      </section>    
 
       <section class="right">
           <div class="carousel-track" id="carouselTrack">
@@ -165,158 +168,157 @@
           </nav>
       </section>
 
-      <!-- Overlay Container -->
+      <!-- Overlay content -->
       <!-- Overlay for "Crete" -->
-<section class="overlay" id="crete-overlay">
-  <div class="overlay-split">
-    <!-- LEFT PANEL -->
-    <section class="overlay-left">
-      <div class="overlay-header">
-        <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
-        <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
-        <button class="close" aria-label="Close overlay">×</button>
-      </div>
-      <div class="overlay-body">
-        <h2>Our Workation to Crete</h2>
-        <p>In what we can now officially call a tradition, the team at A Bigger Circle goes on workation together every year. This year, we chose the beautiful island of Crete to combine productive work sessions with team-building activities and relaxation.</p>
-        <p>During our stay, we held daily workshops focused on our upcoming projects, brainstormed new service offerings, and enjoyed the local cuisine and beaches. These workations have proven invaluable for strengthening our team bonds and sparking innovation.</p>
-        <button class="contact-button">Contact us</button>
-      </div>
-      <nav class="social-nav">
-        <address>
-          <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
-        </address>
-      </nav>
-    </section>
-    
-    <!-- RIGHT PANEL -->
-    <section class="overlay-right">
-      <img src="./assets/team.jpg" alt="Team photo in Crete">
-    </section>
-  </div>
-</section>
-
-<!-- Overlay for "Party Mix" -->
-<section class="overlay" id="partymix">
-  <div class="overlay-split">
-    <!-- LEFT PANEL -->
-    <section class="overlay-left">
-      <div class="overlay-header">
-        <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
-        <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
-        <button class="close" aria-label="Close overlay">×</button>
-      </div>
-      <div class="overlay-body">
-        <h2>Celebrating Milestones with a Party Mix</h2>
-        <p>At A Bigger Circle, we believe in celebrating our achievements together. Our team organized a special party mix event to commemorate reaching several important milestones this year.</p>
-        <p>The celebration included a curated playlist, custom cocktails named after our successful projects, and a slideshow highlighting our journey. These moments of celebration are crucial for maintaining our positive company culture and acknowledging everyone's hard work.</p>
-        <button class="contact-button">Join our next celebration</button>
-      </div>
-      <nav class="social-nav">
-        <address>
-          <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
-        </address>
-      </nav>
-    </section>
-    
-    <!-- RIGHT PANEL -->
-    <section class="overlay-right">
-      <img src="./assets/carousel/partymix.png" alt="Party mix celebration">
-    </section>
-  </div>
-</section>
-
-<!-- Overlay for "Exploring New Horizons" -->
-<section class="overlay" id="crete-overlay2">
-  <div class="overlay-split">
-    <!-- LEFT PANEL -->
-    <section class="overlay-left">
-      <div class="overlay-header">
-        <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
-        <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
-        <button class="close" aria-label="Close overlay">×</button>
-      </div>
-      <div class="overlay-body">
-        <h2>Exploring New Horizons Together</h2>
-        <p>Every year, we embark on a journey to strengthen our bond and spark innovation. These trips are more than just team-building exercises; they're opportunities to see our work from new perspectives and gain fresh insights.</p>
-        <p>During our latest exploration, we discovered new approaches to audience intelligence that we're excited to implement in our upcoming projects. These shared experiences create lasting memories and deepen our collaborative spirit.</p>
-        <button class="contact-button">Learn about our approach</button>
-      </div>
-      <nav class="social-nav">
-        <address>
-          <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
-        </address>
-      </nav>
-    </section>
-    
-    <!-- RIGHT PANEL -->
-    <section class="overlay-right">
-      <img src="./assets/mainimg.jpg" alt="Team exploring new horizons">
-    </section>
-  </div>
-</section>
-
-<!-- Overlay for "Show Me More" -->
-<section class="overlay" id="crete-overlay3">
-  <div class="overlay-split">
-    <!-- LEFT PANEL -->
-    <section class="overlay-left">
-      <div class="overlay-header">
-        <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
-        <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
-        <button class="close" aria-label="Close overlay">×</button>
-      </div>
-      <div class="overlay-body">
-        <h2>Behind the Scenes at A Bigger Circle</h2>
-        <p>Want to learn more about how we work? Our team combines expertise in brand strategy, audience intelligence, and creative communication to help brands become part of meaningful conversations.</p>
-        <p>We believe that the most successful brands are those that understand their audience deeply and engage in authentic conversations. Our approach is built on data-driven insights combined with creative storytelling techniques.</p>
-        <button class="contact-button">Get in touch</button>
-      </div>
-      <nav class="social-nav">
-        <address>
-          <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
-        </address>
-      </nav>
-    </section>
-    
-    <!-- RIGHT PANEL -->
-    <section class="overlay-right">
-      <img src="./assets/mainimg.jpg" alt="Behind the scenes">
-    </section>
-  </div>
-</section>
-
-<!-- Overlay for "Vogue" -->
-<section class="overlay" id="vogue">
-  <div class="overlay-split">
-    <!-- LEFT PANEL -->
-    <section class="overlay-left">
-      <div class="overlay-header">
-        <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
-        <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
-        <button class="close" aria-label="Close overlay">×</button>
-      </div>
-      <div class="overlay-body">
-        <h2>Our Feature in Design Publications</h2>
-        <p>We're excited to share that our recent branding work has been featured in several prestigious design publications. This recognition highlights our commitment to innovative visual storytelling and effective brand communication.</p>
-        <p>Our approach combines cutting-edge design thinking with strategic insights about audience behavior and preferences. The result is branding that not only looks beautiful but also creates meaningful connections.</p>
-        <button class="contact-button">See our portfolio</button>
-      </div>
-      <nav class="social-nav">
-        <address>
-          <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
-        </address>
-      </nav>
-    </section>
-    
-    <!-- RIGHT PANEL -->
-    <section class="overlay-right">
-      <img src="./assets/carousel/slide1.jpg" alt="Design publication feature">
-    </section>
-  </div>
-</section>
+      <section class="overlay" id="crete-overlay">
+        <div class="overlay-split">
+          <!-- LEFT PANEL -->
+          <section class="overlay-left">
+            <div class="overlay-header">
+              <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
+              <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
+              <button class="close" aria-label="Close overlay">×</button>
+            </div>
+            <div class="overlay-body">
+              <h2>Our Workation to Crete</h2>
+              <p>In what we can now officially call a tradition, the team at A Bigger Circle goes on workation together every year. This year, we chose the beautiful island of Crete to combine productive work sessions with team-building activities and relaxation.</p>
+              <p>During our stay, we held daily workshops focused on our upcoming projects, brainstormed new service offerings, and enjoyed the local cuisine and beaches. These workations have proven invaluable for strengthening our team bonds and sparking innovation.</p>
+              <button class="contact-button">Contact us</button>
+            </div>
+            <nav class="social-nav">
+              <address>
+                <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
+              </address>
+            </nav>
+          </section>
+          
+          <!-- RIGHT PANEL -->
+          <section class="overlay-right">
+            <img src="./assets/team.jpg" alt="Team photo in Crete">
+          </section>
+        </div>
       </section>
-        
+
+      <!-- Overlay for "Party Mix" -->
+      <section class="overlay" id="partymix">
+        <div class="overlay-split">
+          <!-- LEFT PANEL -->
+          <section class="overlay-left">
+            <div class="overlay-header">
+              <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
+              <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
+              <button class="close" aria-label="Close overlay">×</button>
+            </div>
+            <div class="overlay-body">
+              <h2>Celebrating Milestones with a Party Mix</h2>
+              <p>At A Bigger Circle, we believe in celebrating our achievements together. Our team organized a special party mix event to commemorate reaching several important milestones this year.</p>
+              <p>The celebration included a curated playlist, custom cocktails named after our successful projects, and a slideshow highlighting our journey. These moments of celebration are crucial for maintaining our positive company culture and acknowledging everyone's hard work.</p>
+              <button class="contact-button">Join our next celebration</button>
+            </div>
+            <nav class="social-nav">
+              <address>
+                <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
+              </address>
+            </nav>
+          </section>
+          
+          <!-- RIGHT PANEL -->
+          <section class="overlay-right">
+            <img src="./assets/carousel/partymix.png" alt="Party mix celebration">
+          </section>
+        </div>
+      </section>
+
+      <!-- Overlay for "Exploring New Horizons" -->
+      <section class="overlay" id="crete-overlay2">
+        <div class="overlay-split">
+          <!-- LEFT PANEL -->
+          <section class="overlay-left">
+            <div class="overlay-header">
+              <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
+              <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
+              <button class="close" aria-label="Close overlay">×</button>
+            </div>
+            <div class="overlay-body">
+              <h2>Exploring New Horizons Together</h2>
+              <p>Every year, we embark on a journey to strengthen our bond and spark innovation. These trips are more than just team-building exercises; they're opportunities to see our work from new perspectives and gain fresh insights.</p>
+              <p>During our latest exploration, we discovered new approaches to audience intelligence that we're excited to implement in our upcoming projects. These shared experiences create lasting memories and deepen our collaborative spirit.</p>
+              <button class="contact-button">Learn about our approach</button>
+            </div>
+            <nav class="social-nav">
+              <address>
+                <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
+              </address>
+            </nav>
+          </section>
+          
+          <!-- RIGHT PANEL -->
+          <section class="overlay-right">
+            <img src="./assets/mainimg.jpg" alt="Team exploring new horizons">
+          </section>
+        </div>
+      </section>
+
+      <!-- Overlay for "Show Me More" -->
+      <section class="overlay" id="crete-overlay3">
+        <div class="overlay-split">
+          <!-- LEFT PANEL -->
+          <section class="overlay-left">
+            <div class="overlay-header">
+              <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
+              <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
+              <button class="close" aria-label="Close overlay">×</button>
+            </div>
+            <div class="overlay-body">
+              <h2>Behind the Scenes at A Bigger Circle</h2>
+              <p>Want to learn more about how we work? Our team combines expertise in brand strategy, audience intelligence, and creative communication to help brands become part of meaningful conversations.</p>
+              <p>We believe that the most successful brands are those that understand their audience deeply and engage in authentic conversations. Our approach is built on data-driven insights combined with creative storytelling techniques.</p>
+              <button class="contact-button">Get in touch</button>
+            </div>
+            <nav class="social-nav">
+              <address>
+                <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
+              </address>
+            </nav>
+          </section>
+          
+          <!-- RIGHT PANEL -->
+          <section class="overlay-right">
+            <img src="./assets/mainimg.jpg" alt="Behind the scenes">
+          </section>
+        </div>
+      </section>
+
+      <!-- Overlay for "Vogue" -->
+      <section class="overlay" id="vogue">
+        <div class="overlay-split">
+          <!-- LEFT PANEL -->
+          <section class="overlay-left">
+            <div class="overlay-header">
+              <img src="./assets/logo/OAT_Left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
+              <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo logo-mobile">
+              <button class="close" aria-label="Close overlay">×</button>
+            </div>
+            <div class="overlay-body">
+              <h2>Our Feature in Design Publications</h2>
+              <p>We're excited to share that our recent branding work has been featured in several prestigious design publications. This recognition highlights our commitment to innovative visual storytelling and effective brand communication.</p>
+              <p>Our approach combines cutting-edge design thinking with strategic insights about audience behavior and preferences. The result is branding that not only looks beautiful but also creates meaningful connections.</p>
+              <button class="contact-button">See our portfolio</button>
+            </div>
+            <nav class="social-nav">
+              <address>
+                <p>Pilotenstraat 39a, 1059CH Amsterdam</p>
+              </address>
+            </nav>
+          </section>
+          
+          <!-- RIGHT PANEL -->
+          <section class="overlay-right">
+            <img src="./assets/carousel/slide1.jpg" alt="Design publication feature">
+          </section>
+        </div>
+      </section>
+ 
     </main>
     <script src="js/carousel.js"></script>
     <script src="js/overlay.js"></script>

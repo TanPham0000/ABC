@@ -97,24 +97,24 @@
 }
 
 .carousel-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
   cursor: pointer;
-  
 }
 
 #nextBtn, #prevBtn {
   background: transparent;
-  
+  fill: transparent;
   border: 2px solid var(--secondary);
   transition: var(--transition);
 }
 
-#nextBtn:hover, #prevBtn:hover {
-  background: var(--secondary);
-  color: var(--primary);
-  mix-blend-mode: screen;
+#nextBtn:hover, #prevBtn:hover{
+  background: var(--primary);
 }
 /* ===== Carousel Dots ===== */
 .carousel-dots {
