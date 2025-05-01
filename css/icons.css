@@ -22,27 +22,37 @@
 }
 
 /* icon styles */
-svg {
+.info-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: fit-content;
-  height: 36px;
-  margin: auto;
-  transition: all 0.3s ease;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--secondary, #FFF9EE);
+  color: var(--primary);
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.info-icon:hover {
+  background-color: var(--primary);
+  color: var(--secondary);
+  transform: scale(1.05);
 }
 
 .social-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  border: 2px solid var(--primary);
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--primary, #1108BB); 
   border-radius: 50%;
-  background-color: var(--secondary);
+  background-color: var(--secondary, #FFF9EE);
   color: var(--primary);
   text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .social-link:hover {
@@ -50,6 +60,14 @@ svg {
   color: var(--secondary);
   transform: scale(1.05);
 }
+
+.social-link svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+  color: inherit;
+}
+
 
 @media (max-width: 768px) {
     .social-grid {

@@ -126,10 +126,6 @@ header {
   transition: var(--transition);
 }
 
-.logo:hover {
-  transform: scale(1.05);
-}
-
 .logo-mobile { display: none; }
 .logo-desktop { display: block; }
 
