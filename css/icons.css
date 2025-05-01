@@ -26,27 +26,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
   border-radius: 50%;
-  background-color: var(--secondary, #FFF9EE);
-  color: var(--primary);
+  width: 36px;
+  height: 36px;
+  color:var(--primary, #1108BB);
   text-decoration: none;
-  transition: background-color 0.3s, transform 0.3s;
 }
 
 .info-icon:hover {
-  background-color: var(--primary);
   color: var(--secondary);
+  border: #1108BB 2px solid;
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 .social-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
   border: 2px solid var(--primary, #1108BB); 
   border-radius: 50%;
   background-color: var(--secondary, #FFF9EE);
@@ -62,8 +61,8 @@
 }
 
 .social-link svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   display: block;
   color: inherit;
 }
@@ -85,8 +84,8 @@
       }
 
       .social-link, .info-icon {
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
       }
 
       .social-nav {
