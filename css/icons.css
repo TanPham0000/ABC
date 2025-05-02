@@ -63,6 +63,13 @@
   background-color: var(--primary, #1108BB);
 }
 
+.close:hover {
+  color: var(--primary, #1108BB);
+  transform: scale(1.05);
+  background-color: var(--secondary, #FFF9EE);
+  border: var(--primary, #1108BB) 3px solid;
+}
+
 .close-header {
   display: flex;
 }
