@@ -72,28 +72,20 @@
   align-items: start;
 }
 
-.logo-desktop, .logo-mobile {
+.logo-desktop {
   height: 5rem;
   justify-content: start;
 }
 
-.overlay-header .close {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: var(--secondary);
-  cursor: pointer;
-}
-
 .overlay-body {
-  margin-top: 1rem;
+  padding: 1rem 0 1rem 0;
   display: flex;
   flex-direction: column;
   align-content: flex-start;
 }
 
 .overlay-body h2 {
-  font-size: 2rem;
+  font-size: clamp(5rem, 10vw, 6rem);
   line-height: 1.1;
   margin-bottom: 1.5rem;
 }
@@ -105,7 +97,6 @@
 }
 
 .overlay-body .contact-button {
-  align-self: center;
   padding: 0.5rem 3rem;
   border: none;
   cursor: pointer;
@@ -125,7 +116,10 @@
 .overlay-body .contact-button:active {
   background-color: var(--secondary);
   color: var(--primary);
-  
+}
+
+body.night-mode .social-nav address {
+  color: var(--secondary);
 }
 
 /* ===== Social Navigation ===== */
@@ -150,5 +144,12 @@
 
   .overlay-right {
     display: none;    
+  }
+
+  .contact-button {
+    align-self: center;
+  }
+  .social-nav .hidden {
+    display: none;
   }
 }

@@ -52,6 +52,17 @@
   transition: color 0.3s;
 }
 
+.close {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: var(--secondary, #FFF9EE) 2px solid;
+  cursor: pointer;
+  color: var(--secondary, #FFF9EE);
+  background-color: var(--primary, #1108BB);
+}
+
 /* social icon styles */
 .social-link {
   display: flex;
