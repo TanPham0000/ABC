@@ -149,6 +149,10 @@ body.night-mode .social-nav address {
   .contact-button {
     align-self: center;
   }
+
+  .overlay-header {
+    justify-content: center;
+  }
   .social-nav .hidden {
     display: none;
   }
