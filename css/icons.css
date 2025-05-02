@@ -40,6 +40,18 @@
   cursor: pointer;
 }
 
+.i-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  color: var(--secondary, #FFF9EE);
+}
+
+.info-icon:hover .i-icon {
+  color: var(--primary, #1108BB);
+  transition: color 0.3s;
+}
+
 .social-link {
   display: flex;
   justify-content: center;
@@ -86,8 +98,8 @@
       }
 
       .social-link, .info-icon {
-        width: 48px;
-        height: 48px;
+        width: 42px;
+        height: 42px;
       }
 
       .social-nav {
