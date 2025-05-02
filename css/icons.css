@@ -35,9 +35,9 @@
 
 .info-icon:hover {
   color: var(--secondary);
-  border: #1108BB 2px solid;
   transform: scale(1.05);
   cursor: pointer;
+  border: var(--primary, #1108BB) 2px solid;
 }
 
 .i-icon {
@@ -52,6 +52,7 @@
   transition: color 0.3s;
 }
 
+/* social icon styles */
 .social-link {
   display: flex;
   justify-content: center;
@@ -79,6 +80,37 @@
   color: inherit;
 }
 
+/* Ultramarine theme */
+body.night-mode .social-link {
+  border: var(--secondary, #FFF9EE) 2px solid;
+  color: var(--secondary, #FFF9EE);
+  background-color: var(--primary, #1108BB);
+}
+
+body.night-mode .social-link:hover {
+  background-color: var(--secondary, #FFF9EE);
+  color: var(--primary, #1108BB);
+  transform: scale(1.05);
+}
+
+body.night-mode .info-icon{
+  border: var(--secondary, #FFF9EE) 2px solid;
+  background-color: var(--secondary);
+  color: var(--secondary, #FFF9EE);
+}
+
+body.night-mode .i-icon{
+  color: var(--primary, #1108BB);
+}
+
+body.night-mode .info-icon:hover {
+  color: var(--primary, #1108BB); ;
+  transform: scale(1.05);
+}
+
+body.night-mode .info-icon:hover .i-icon{
+  color: var(--secondary, #FFF9EE);
+}
 
 @media (max-width: 768px) {
     .social-grid {
