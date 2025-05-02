@@ -72,20 +72,22 @@
     .social-grid {
         grid-template-rows: 1fr;
         grid-template-columns: repeat(6, 1fr);
+        gap: 8px;
       }
 
       .social-container {
         flex-direction: row;
+        gap: 8px;
       }
 
       .social-list {
         flex-direction: row;
-        gap: 4px;
+        gap: 5px;
       }
 
       .social-link, .info-icon {
-        width: 35px;
-        height: 35px;
+        width: 48px;
+        height: 48px;
       }
 
       .social-nav {
