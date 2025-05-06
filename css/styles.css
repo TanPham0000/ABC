@@ -58,6 +58,7 @@
   line-break: loose;
   font-style: normal;
   border: none;
+  
 }
 
 html, body {
@@ -82,6 +83,7 @@ h1 {
   text-transform: uppercase;
   animation: fadeIn 0.8s ease-out forwards;
   opacity: 0;
+  transition: all 0.3s ease;
 }
 
 h2 {
@@ -89,6 +91,7 @@ h2 {
   color: var(--secondary);
   font-size: 5rem;
   margin-bottom: 1rem;
+  transition: all 0.3s ease;
 }
 
 address {
@@ -96,6 +99,7 @@ address {
   line-height: 1.5;
   letter-spacing: 0.3em;
   color: var(--primary);
+  transition: all 0.3s ease;
 }
 
 video {
@@ -266,6 +270,8 @@ header {
 
   address {
     text-align: center;
+    overflow: visible;
+    white-space: nowrap;
   }
 
   .inner-container {

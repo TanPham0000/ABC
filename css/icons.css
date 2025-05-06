@@ -58,8 +58,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   background: var(--primary);
   border-radius: 50%;
   border: var(--primary) 2px solid;
@@ -67,11 +67,18 @@
   transition: all 0.3s ease;
 }
 
+.close-button svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .close-button:hover {
   background: var(--secondary, #FFF9EE);
   color: var(--primary, #1108BB);
   border: var(--secondary, #FFF9EE) 2px solid;
   cursor: pointer;
+  transform: scale(1.05);
 }
 
 .close-header {
@@ -93,7 +100,7 @@
   background-color: var(--secondary, #FFF9EE);
   color: var(--primary);
   text-decoration: none;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: all 0.3s ease;
 }
 
 .social-link:hover {
@@ -155,7 +162,7 @@ body.night-mode .info-icon:hover .i-icon{
      flex-direction: row;
      gap: 5px;
    }  
-   .social-link, .info-icon .close-button {
+   .social-link, .info-icon {
      width: 42px;
      height: 42px;
    }  
@@ -163,7 +170,11 @@ body.night-mode .info-icon:hover .i-icon{
      align-items: center;
      flex-direction: column-reverse;
      gap: 1rem;
-   }  
+   }
+   .close-button {
+    width: 44px;
+    height: 44px;
+   }
    .close-header {
      display: none;
    }
@@ -186,4 +197,14 @@ body.night-mode .info-icon:hover .i-icon{
         gap: 0;
         align-content: center;
     }
+
+    .social-link, .info-icon {
+      width: 36px;
+      height: 36px;
+    }  
+
+    .close-button {
+      width: 38px;
+      height: 38px;
+     }
 }
