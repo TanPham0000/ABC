@@ -31,6 +31,7 @@
   height: 36px;
   color:var(--primary, #1108BB);
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .info-icon:hover {
@@ -45,6 +46,7 @@
   height: 20px;
   display: block;
   color: var(--secondary, #FFF9EE);
+  transition: all 0.3s ease;
 }
 
 .info-icon:hover .i-icon {
@@ -52,22 +54,24 @@
   transition: color 0.3s;
 }
 
-.close {
+.close-button {
   display: flex;
-  width: 42px;
-  height: 42px;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background: var(--primary);
   border-radius: 50%;
-  border: var(--secondary, #FFF9EE) 2px solid;
-  cursor: pointer;
+  border: var(--primary) 2px solid;
   color: var(--secondary, #FFF9EE);
-  background-color: var(--primary, #1108BB);
+  transition: all 0.3s ease;
 }
 
-.close:hover {
+.close-button:hover {
+  background: var(--secondary, #FFF9EE);
   color: var(--primary, #1108BB);
-  transform: scale(1.05);
-  background-color: var(--secondary, #FFF9EE);
-  border: var(--primary, #1108BB) 3px solid;
+  border: var(--secondary, #FFF9EE) 2px solid;
+  cursor: pointer;
 }
 
 .close-header {
@@ -151,7 +155,7 @@ body.night-mode .info-icon:hover .i-icon{
      flex-direction: row;
      gap: 5px;
    }  
-   .social-link, .info-icon {
+   .social-link, .info-icon .close-button {
      width: 42px;
      height: 42px;
    }  
@@ -169,7 +173,7 @@ body.night-mode .info-icon:hover .i-icon{
    }
 
    /* Optionally hide info icon on mobile */
-   .info-icon {
+   body.night-mode .info-icon {
      display: none;
    }
 

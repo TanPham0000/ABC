@@ -103,9 +103,10 @@
   width: 80%;
   max-width: 300px;
   border-radius: 10px;
-  color: var(--primary);
+  color: var(--secondary);
+  border: var(--secondary) 2px solid;
   text-align: center;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   font-family: 'Obviously semibold', sans-serif;
   font-size: 1.2rem;
   transition: all 0.3s ease;

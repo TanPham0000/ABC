@@ -65,22 +65,22 @@
   bottom: 2rem;
   right: 1%;
   padding: 1.5rem;
+  margin-left: 10%;
   text-align: end;
   backdrop-filter: blur(1px);
-  border-radius: 1rem;
   transition: var(--transition);
   z-index: 2;
 }
 
 .carousel-slide h2 {
   margin-bottom: 1rem;
-  line-height: 52px;
-  font-size: 3rem;
+  line-height: 0.9; 
+  font-size: clamp(7.4rem, 10vw, 8rem);
 }
 
 .carousel-slide p {
   margin-bottom: 1.2rem;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   line-height: 1.4;
 }
 
@@ -165,6 +165,7 @@
     text-align: center;
     left: 0;
     bottom: 15%;
+    margin-left: 0;
   }
 
   .carousel-slide h2 {

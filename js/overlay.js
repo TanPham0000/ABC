@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   const openButtons = document.querySelectorAll('[data-overlay-target]');
-  const closeButtons = document.querySelectorAll('.overlay .close');
+  const closeButtons = document.querySelectorAll('.overlay .close-button');
   const overlays = document.querySelectorAll('.overlay');
 
   // Theme toggle button (if you still want it)
