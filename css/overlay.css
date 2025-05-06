@@ -129,7 +129,7 @@ body.night-mode .social-nav address {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 /* ===== Responsive Styles ===== */

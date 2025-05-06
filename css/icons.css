@@ -169,7 +169,7 @@ body.night-mode .info-icon:hover .i-icon{
    .social-nav {
      align-items: center;
      flex-direction: column-reverse;
-     gap: 1rem;
+     gap: 10px;
    }
    .close-button {
     width: 44px;
@@ -192,10 +192,10 @@ body.night-mode .info-icon:hover .i-icon{
 
 @media (max-width: 480px) {
     .social-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0;
-        align-content: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0;
+      align-content: center;
     }
 
     .social-link, .info-icon {

@@ -78,7 +78,7 @@ main {
 h1 {
   color: var(--primary);
   font-family: 'Obviously Bold', sans-serif;
-  font-size: clamp(6.8rem, 10vw, 12rem);
+  font-size: clamp(6.5rem, 10vw, 12rem);
   line-height: 0.85;
   text-transform: uppercase;
   animation: fadeIn 0.8s ease-out forwards;
@@ -89,8 +89,7 @@ h1 {
 h2 {
   font-family: 'Obviously condensed semibold', sans-serif;
   color: var(--secondary);
-  font-size: 5rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
   transition: all 0.3s ease;
 }
 
@@ -100,14 +99,6 @@ address {
   letter-spacing: 0.3em;
   color: var(--primary);
   transition: all 0.3s ease;
-}
-
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  filter: brightness(0.8);
 }
 
 a:visited {
@@ -135,7 +126,7 @@ header {
 }
 
 .logo {
-  height: clamp(5rem, 2rem, 4rem);
+  height: clamp(3rem, 2rem, 5rem);
   transition: var(--transition);
 }
 
@@ -189,22 +180,6 @@ header {
 }
 
 /* Buttons */
-.read-more {
-  padding: 0.5rem 1.5rem;
-  font-family: 'Obviously Semibold', sans-serif;	
-  font-size: 1rem;
-  color: var(--secondary);
-  background: transparent;
-  border: 2px solid var(--secondary);
-  border-radius: 10px;
-  transition: var(--transition);
-}
-
-.read-more:hover {
-  color: var(--primary);
-  background: var(--secondary);
-}
-
 .close-content {
   position: absolute;
   top: 2rem;
@@ -242,6 +217,10 @@ header {
     width: 100%;
   }
 
+  .left {
+    padding: 1rem;
+  }
+
   .logo-mobile {
     display: block;
     height: 4rem;
@@ -252,11 +231,8 @@ header {
     display: none;
   }
 
-  .nav-arrows {
-    display: none;
-  }
-
   h1 {
+    font-size: clamp(6rem, 10vw, 10rem);
     text-align: center;
   }
 
@@ -276,8 +252,8 @@ header {
 
   .inner-container {
     height: 100%;
-    
-  }
+    padding: 0 1rem 0 1rem;
+    }
 
   .left-text {
     font-size: clamp(2.5rem, 8vw, 4rem);
@@ -300,9 +276,9 @@ header {
   }
 }
 
-@media (max-width: 478px) {
-  .left {
-    padding: 1rem;
+@media (max-width: 420px) {
+  .inner-container {
+    padding: 0 1em 0 1em; 
   }
 
   .left-text {
@@ -310,7 +286,11 @@ header {
   }
 
   h1 {
-    font-size: clamp(4.5rem, 10vw, 8rem);
+    font-size: clamp(65px, 6vw, 75px);
+  }
+
+  address {
+    font-size: 0.6rem;
   }
 
   .hero-image figcaption {
