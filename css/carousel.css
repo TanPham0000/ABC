@@ -92,7 +92,7 @@ video {
   border-radius: 10px;
   transition: var(--transition);
   align-self: flex-end;
-  width: 50%;
+  width: fit-content;
 }
 
 .read-more:hover {
@@ -106,7 +106,7 @@ video {
 }
 
 .carousel-slide p {
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-size: clamp(1rem, 1vw, 1.2rem);
   line-height: 1.4;
 }
 
