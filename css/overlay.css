@@ -140,7 +140,8 @@ body.night-mode .social-nav address {
   
   .overlay-left {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
+    justify-content: center;
   }
 
   .overlay-right {

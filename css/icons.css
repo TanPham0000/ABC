@@ -46,7 +46,7 @@
   height: 20px;
   display: block;
   color: var(--secondary, #FFF9EE);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .info-icon:hover .i-icon {
@@ -82,11 +82,11 @@
 }
 
 .close-header {
-  display: flex;
+  display: none;
 }
 
 .close-social {
-  display: none;
+  display: flex;
 }
 /* social icon styles */
 .social-link {
@@ -130,6 +130,7 @@ body.night-mode .social-link:hover {
 }
 
 body.night-mode .info-icon{
+  display: none;
   border: var(--secondary, #FFF9EE) 2px solid;
   background-color: var(--secondary);
   color: var(--secondary, #FFF9EE);
@@ -137,6 +138,7 @@ body.night-mode .info-icon{
 
 body.night-mode .i-icon{
   color: var(--primary, #1108BB);
+  transition: all 0.2s ease;
 }
 
 body.night-mode .info-icon:hover {
