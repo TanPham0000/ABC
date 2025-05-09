@@ -27,16 +27,53 @@ function applyParallax(x, y) {
 
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
+function handleOrientation(event) {
+  const x = event.gamma / 45; // -1 to 1
+  const y = event.beta / 45;
+  applyParallax(x, y);
+}
+
 if (isMobile && window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", (event) => {
-        const x = event.gamma / 45; // range: -90 to 90, normalize to -1 to 1
-        const y = event.beta / 45;  // range: -180 to 180, normalize to -1 to 1
-        applyParallax(x, y);
-    }, true);
-} else {
-    document.addEventListener('mousemove', (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 2;
-        const y = (e.clientY / window.innerHeight - 0.5) * 2;
-        applyParallax(x, y);
+  if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+    // iOS 13+ requires permission
+    const button = document.createElement('button');
+    button.innerText = 'Enable Motion';
+    button.style.position = 'absolute';
+    button.style.top = '20px';
+    button.style.left = '50%';
+    button.style.transform = 'translateX(-50%)';
+    button.style.zIndex = '9999';
+    button.style.padding = '10px 20px';
+    button.style.fontSize = '16px';
+    button.style.backgroundColor = '#1108BB';
+    button.style.color = '#FFF9EE';
+    button.style.border = 'none';
+    button.style.borderRadius = '8px';
+    button.style.cursor = 'pointer';
+    button.style.fontFamily = 'Obviously Regular, sans-serif';
+    button.style.textTransform = 'uppercase';
+
+    document.body.appendChild(button);
+
+    button.addEventListener('click', () => {
+      DeviceOrientationEvent.requestPermission()
+        .then(response => {
+          if (response === 'granted') {
+            window.addEventListener('deviceorientation', handleOrientation, true);
+            button.remove(); // Remove the button after enabling
+          }
+        })
+        .catch(console.error);
     });
+  } else {
+    // Android or older iOS versions
+    window.addEventListener('deviceorientation', handleOrientation, true);
+  }
+} else {
+  // Desktop fallback with mouse
+  document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 2;
+    const y = (e.clientY / window.innerHeight - 0.5) * 2;
+    applyParallax(x, y);
+  });
 }
