@@ -145,6 +145,7 @@ video {
   gap: 16px;
   transform: translateY(-50%);
   z-index: 5;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
 }
 
 .carousel-btn {
@@ -195,6 +196,7 @@ video {
   display: flex;
   gap: 0.5rem;
   z-index: 10;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
 }
 
 .carousel-dot {

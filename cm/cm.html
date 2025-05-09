@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Content Manager</title>
+  <link rel="stylesheet" href="./cmstyles.css"/>
+</head>
+<body>
+  <section class="content-manager">
+    <h1>Upload New Content</h1>
+    <form id="uploadForm">
+      <label for="coverImage">Cover Image:</label>
+      <input type="file" id="coverImage" accept="image/*" required />
+      <img id="imagePreview" src="" alt="Image Preview" />
+
+      <label for="articleLink">Article URL:</label>
+      <input type="url" id="articleLink" placeholder="https://example.com" required />
+
+      <label for="description">Description:</label>
+      <textarea id="description" rows="3" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Manage Content</h2>
+    <div id="contentList"></div>
+  </section>
+
+  <script src="./cmscript.js"></script>
+</body>
+</html>

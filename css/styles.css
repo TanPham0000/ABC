@@ -237,7 +237,7 @@ header {
   }
 
   h1 {
-    font-size: clamp(6rem, 10vw, 10rem);
+    font-size: clamp(3rem, 20vw, 12rem);
     text-align: center;
   }
 
@@ -259,10 +259,6 @@ header {
     height: 100%;
     padding: 0 1rem 0 1rem;
     }
-
-  .left-text {
-    font-size: clamp(2.5rem, 8vw, 4rem);
-  }
 
   .word {
     display: inline;
