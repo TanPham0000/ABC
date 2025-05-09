@@ -261,7 +261,7 @@ header {
     }
 
   .word {
-    display: inline;
+    display: inline-flex;
   }
 
   .hero-image figcaption {
