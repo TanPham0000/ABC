@@ -15,8 +15,6 @@
 .overlay.active {
   display: block;
   opacity: 1;
-  /* animation-duration: 1s;
-  animation-name: slide-in; */
 }
 
 .overlay.closing {
