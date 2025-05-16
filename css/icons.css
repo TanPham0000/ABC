@@ -11,7 +11,9 @@
   align-items: end;
   flex-direction: column;
   gap: 4px;
+  animation: fadeIn 0.8s ease-out forwards;
 }
+
 .social-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -57,8 +57,7 @@
   list-style: none;
   line-break: loose;
   font-style: normal;
-  border: none;
-  
+  border: none;  
 }
 
 html, body {
@@ -133,6 +132,7 @@ header {
 .logo {
   height: clamp(3rem, 2rem, 5rem);
   transition: var(--transition);
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 .logo-mobile { display: none; }
