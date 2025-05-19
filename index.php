@@ -103,8 +103,21 @@
             </figcaption>
           </figure> 
             
-          <!-- Add more slides as needed -->
-
+          <?php
+              $dataFile = 'data.json';
+              $items = file_exists($dataFile) ? json_decode(file_get_contents($dataFile), true) : [];
+              $dynamic = array_slice($items, 0, 2);?>
+              
+            <?php foreach ($dynamic as $item): ?>
+              <figure class="carousel-slide">
+                <img src="<?= $item['image'] ?>" alt="Dynamic Slide">
+                <figcaption>
+                  <h2>Linked Article</h2>
+                  <p><?= htmlspecialchars($item['desc']) ?></p>
+                  <a href="<?= $item['link'] ?>" target="_blank" class="read-more">Read more</a>
+                </figcaption>
+              </figure>
+            <?php endforeach; ?>
         </div>
         <!-- Carousel Ticker -->  
         <div class="carousel-dots" id="carouselDots">
@@ -177,7 +190,7 @@
       </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <script src="js/test.js"></script>
+    <script src="js/extra.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/overlay.js"></script>
