@@ -85,11 +85,11 @@
         
           <!-- Slide 2 -->
           <figure class="carousel-slide">
-            <img src="./assets/carousel/agencydeck.jpg" alt="Agency deck download" loading="eager">
+            <img src="./assets/carousel/partymix.jpg" alt="Agency deck download" loading="eager">
             <figcaption>
-              <h2>Download our deck</h2>
+              <h2>Celebrating milestones with a party mix</h2>
               <p>Our team knows how to celebrate achievements with style and creativity.</p>
-              <button class="read-more open-overlay" data-overlay-target="partymix" href="">Download pitchdeck</button>
+              <button class="read-more open-overlay" data-overlay-target="partymix">Read more</button>
             </figcaption>
           </figure> 
 
@@ -143,8 +143,8 @@
           <!-- LEFT PANEL -->
           <section class="overlay-left">
             <div class="overlay-header">
-              <img src="./assets/logo/OAT_left.svg" alt="A Bigger Circle Logo" class="logo-desktop" id="logo-desktop">
-              <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo-mobile" id="logo-mobile">
+              <img src="./assets/logo/OAT_left.svg" alt="A Bigger Circle Logo" class="logo-desktop">
+              <img src="./assets/logo/OAT_Center.svg" alt="A Bigger Circle Logo" class="logo-mobile">
               <button  class="close-button close-header" aria-label="Close overlay">
                 <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" width="34" height="34"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 0c9.389 0 17 7.611 17 17s-7.611 17-17 17S0 26.389 0 17 7.611 0 17 0m0 15.565-5.741-5.742-1.436 1.436L15.565 17l-5.742 5.741 1.436 1.436L17 18.435l5.741 5.742 1.436-1.436L18.435 17l5.742-5.741-1.436-1.436z" fill="currentColor"/></svg>
               </button>
@@ -189,11 +189,13 @@
         </div>
       </section>
     </main>
+<<<<<<< HEAD:index.php
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="js/extra.js"></script>
+=======
+>>>>>>> parent of f980c70 (eggs):index.html
     <script src="js/parallax.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/overlay.js"></script>
   </body>
-  <!-- LETS START THE CONVERSATION -->
 </html>

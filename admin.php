@@ -1,5 +1,5 @@
 <?php
-$dataFile = 'data.json';
+$dataFile = './data.json';
 $items = file_exists($dataFile) ? json_decode(file_get_contents($dataFile), true) : [];
 ?>
 
@@ -8,7 +8,7 @@ $items = file_exists($dataFile) ? json_decode(file_get_contents($dataFile), true
 <head>
   <meta charset="UTF-8">
   <title>Carousel Admin (PHP)</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <h1>📸 Upload Carousel Item</h1>

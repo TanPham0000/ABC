@@ -6,7 +6,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 88;
+  z-index: 1000;
   display: none;
   justify-content: center;
   align-items: center;
@@ -73,10 +73,6 @@
 .logo-desktop {
   height: 5rem;
   justify-content: start;
-}
-
-.logo-desktop:active {
-  transform: scale(1.05);
 }
 
 .overlay-body {
