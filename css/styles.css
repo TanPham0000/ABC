@@ -43,7 +43,6 @@
 :root {
   --primary: #1108BB;
   --secondary: #FFF9EE;
-  --pink: #FF355D;
   --overlay: rgba(0, 0, 0, 0.4);
   --transition: all 0.3s ease;
 }

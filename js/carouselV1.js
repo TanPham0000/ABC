@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dotsContainer = document.getElementById('carouselDots');
   let currentIndex = 0, startPos = 0, currentTranslate = 0, isDragging = false,
       animationID = 0, startTime = 0, autoSlideInterval = 90000, autoSlideTimer,
-      isScrolling = false, scrollTimeout, isMobile = window.innerWidth <= 768,
+      isScrolling = false, isMobile = window.innerWidth <= 768,
       isTransitioning = false;
 
   const initCarousel = () => {
@@ -64,8 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
   };
 
-  const nextSlide = () => { if (!isTransitioning) goToSlide((currentIndex + 1) % slides.length); };
-  const prevSlide = () => { if (!isTransitioning) goToSlide((currentIndex - 1 + slides.length) % slides.length); };
+  const nextSlide = () => { if (!isTransitioning) goToSlide((currentIndex + 1) % slides.length); isScrolling = false; console.log('nextSlide');};
+  const prevSlide = () => { if (!isTransitioning) goToSlide((currentIndex - 1 + slides.length) % slides.length); isScrolling = false; console.log('prevSlide');};
 
   const setupEvents = () => {
     ['touchstart', 'mousedown'].forEach(e => carouselTrack.addEventListener(e, dragStart));
@@ -81,15 +81,22 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isMobile && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) e.key === 'ArrowLeft' ? prevSlide() : nextSlide();
     });
   };
-
+  const SCROLL_SENSITIVITY = 50; // ← lower = more sensitive
   const handleWheel = e => {
-    e.preventDefault();
-    if (!isScrolling) {
+    console.log('scrolling');
+   // e.preventDefault();
+   
+    if(!isScrolling) {
       isScrolling = true;
-      (isMobile ? e.deltaX > 0 : e.deltaY > 0) ? nextSlide() : prevSlide();
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => isScrolling = false, 500);
+        if(e.deltaY > 0) {
+          nextSlide();
+      } else {
+          prevSlide();
+      }
+      //WHEEL EVENT CANCEL
     }
+
+    
   };
 
   const startAutoSlide = () => { autoSlideTimer = setInterval(nextSlide, autoSlideInterval); };
