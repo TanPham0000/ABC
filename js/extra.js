@@ -7,8 +7,9 @@ logoDesktop.onclick = () => {
   const y = rect.top + rect.height / 2;
 
   confetti({
+    zIndex: 9999,
     particleCount: 100,
-    spread: 70,
+    spread: 180,
     origin: {
       x: x / window.innerWidth,
       y: y / window.innerHeight,

@@ -5,8 +5,8 @@
       "title": "New collaboration with Studio XYZ",
       "description": "We've teamed up with Studio XYZ to launch a new creative campaign.",
       "link": "https://example.com/article1"
-    },
-    {
+    }, 
+    { 
       "image": "assets/carousel/slide5.jpg",
       "title": "Design hackathon results",
       "description": "Check out the winning ideas from our latest internal hackathon.",

@@ -270,6 +270,8 @@ video {
 
   .carousel-slide h2 {
     font-size: clamp(4rem, 10vw, 6rem);
+    word-break: keep-all;
+    padding: 0 5% 0 5%;
   }
   
   .carousel-slide p {
