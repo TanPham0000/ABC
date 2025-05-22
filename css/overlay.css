@@ -88,7 +88,7 @@
 
 .overlay-body h2 {
   font-size: clamp(5rem, 10vw, 6rem);
-  line-height: 1.1;
+  line-height: 0.9;
   margin-bottom: 1.5rem;
 }
 
@@ -110,7 +110,7 @@
   text-align: center;
   background-color: var(--primary);
   font-family: 'Obviously semibold', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: all 0.3s ease;
   display: block;
 }

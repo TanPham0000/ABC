@@ -12,7 +12,7 @@ window.addEventListener('orientationchange', updateViewportHeight);
 
 function applyParallax(x, y) {
     document.querySelectorAll('.parallax').forEach((el) => {
-      const depth = parseFloat(el.getAttribute('data-depth')) || 0.4;
+      const depth = parseFloat(el.getAttribute('data-depth')) || 0.7;
       const moveX = -x * 10 * depth;
       const moveY = -y * 10 * depth;
       const rotateX = y * 30 * depth;

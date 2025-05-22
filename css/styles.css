@@ -56,10 +56,8 @@
   list-style: none;
   line-break: loose;
   font-style: normal;
-  border: none;
-  
+  border: none;  
 }
-
 
 html, body {
   width: 100%;
@@ -204,6 +202,7 @@ header {
 /* Typography Helpers */
 .word {
   display: block;
+  z-index: 4;
 }
 
 /* ===== Responsive Styles ===== */
@@ -259,7 +258,8 @@ header {
   .inner-container {
     height: 100%;
     padding: 0 1rem 0 1rem;
-    }
+    justify-content: space-around;
+  }
 
   .word {
     display: inline-flex;
@@ -285,10 +285,6 @@ header {
 
   .left-text {
     text-align: center;
-  }
-
-  h1 {
-    font-size: clamp(65px, 6vw, 75px);
   }
 
   address {
