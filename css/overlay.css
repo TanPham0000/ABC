@@ -136,6 +136,14 @@ body.night-mode .social-nav address {
     flex-direction: column;
   }
   
+  .overlay-body {
+    gap: 6px;
+  }
+
+  .overlay-body p, .overlay-body h2 {
+    margin: 0rem;
+  }
+  
   .overlay-left {
     width: 100vw;
     height: 100vh;
