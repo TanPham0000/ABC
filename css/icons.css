@@ -46,12 +46,10 @@
   height: 20px;
   display: block;
   color: var(--secondary, #FFF9EE);
-  transition: all 0.2s ease;
 }
 
 .info-icon:hover .i-icon {
   color: var(--primary, #1108BB);
-  transition: color 0.3s;
 }
 
 .close-button {
