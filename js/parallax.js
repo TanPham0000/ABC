@@ -52,34 +52,33 @@ function applyParallax(x, y) {
   }
   
   // Add permission button for iOS
-  if (isMobile && window.DeviceOrientationEvent) {
-    const permissionButton = document.createElement('button');
-    permissionButton.innerText = 'Enable Motion';
-    Object.assign(permissionButton.style, {
-      position: 'absolute',
-      top: '20px',
-      left: '50%',
-      transform: 'translateX(-50%)',
-      zIndex: 9999,
-      padding: '12px 24px',
-      fontSize: '16px',
-      border: 'none',
-      background: '#1108BB',
-      color: 'white',
-      borderRadius: '6px',
-      cursor: 'pointer'
-    });
-    document.body.appendChild(permissionButton);
+  // if (isMobile && window.DeviceOrientationEvent) {
+  //   const permissionButton = document.createElement('button');
+  //   permissionButton.innerText = 'Enable Motion';
+  //   Object.assign(permissionButton.style, {
+  //     position: 'absolute',
+  //     top: '20px',
+  //     left: '50%',
+  //     transform: 'translateX(-50%)',
+  //     zIndex: 9999,
+  //     padding: '12px 24px',
+  //     fontSize: '16px',
+  //     border: 'none',
+  //     background: '#1108BB',
+  //     color: 'white',
+  //     borderRadius: '6px',
+  //     cursor: 'pointer'
+  //   });
+  //   document.body.appendChild(permissionButton);
   
-    permissionButton.addEventListener('click', () => {
-      initMotion();
-      permissionButton.remove();
-    });
-  } else {
+  //   permissionButton.addEventListener('click', () => {
+  //     initMotion();
+  //     permissionButton.remove();
+  //   });
+  // } else {
     // Desktop mouse fallback
     document.addEventListener('mousemove', (e) => {
       const x = (e.clientX / window.innerWidth - 0.5) * 2;
       const y = (e.clientY / window.innerHeight - 0.5) * 2;
       applyParallax(x, y);
     });
-  }  
