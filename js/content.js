@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title.textContent = slideData.title;
           desc.textContent = slideData.description;
           link.href = slideData.link;
-          link.textContent = "Read more";
+          link.textContent = slideData.linkText;
         }
       });
     })

@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextSlide = () => goToSlide((currentIndex + 1) % slides.length);
   const prevSlide = () => goToSlide((currentIndex - 1 + slides.length) % slides.length);
 
-  const SCROLL_SENSITIVITY = 50; // ← lower = more sensitive
+  const SCROLL_SENSITIVITY = 50; // ← lower = more sensitive 
   // Handle wheel event for scrolling
   const handleWheel = (e) => {
     e.preventDefault();
@@ -73,9 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
     e.deltaY > 0 ? nextSlide() : prevSlide();
   };
 
+  // Initializes a drag: records start position/time and disables auto-slide
   const dragStart = (e) => {
     if (isTransitioning) return;
-    e.preventDefault();
+    e.preventDefault(); // Prevents the browser’s default behavior (like scrolling), so the drag gesture is handled only by the code.
     startTime = Date.now();
     startPos = getEventPos(e);
     isDragging = true;
@@ -83,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     pauseAutoSlide();
     carouselTrack.classList.add('dragging');
   };
-  
+  // Continuously updates slide position during drag
   const drag = (e) => {
     if (!isDragging) return;
     const pos = getEventPos(e);
@@ -91,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setSlidePositions(currentTranslate / 3);
   };
 
+  // Decides if the drag should trigger a new slide or snap back
   const dragEnd = () => {
     if (!isDragging) return;
     cancelAnimationFrame(animationID);
@@ -100,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     else if (currentTranslate > 100 || (currentTranslate > 0 && moveTime < 300)) prevSlide();
     else setSlidePositions();
     isDragging = false;
-    currentTranslate = 0;
+    currentTranslate = 0;                                                                              
   };
 
   const animate = () => {

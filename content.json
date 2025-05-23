@@ -2,15 +2,17 @@
   "slides": [
     {
       "image": "assets/carousel/slide4.jpg",
-      "title": "New collaboration with Studio XYZ",
-      "description": "We've teamed up with Studio XYZ to launch a new creative campaign.",
-      "link": "https://example.com/article1"
+      "title": "Out of Office",
+      "description": "One week in Crete with the team. Work happened. So did Raki. Have a look at our definition of “Out of Office” 🌞",
+      "link": "https://www.linkedin.com/posts/abiggercircle_workation-2025-activity-7330922243755053056-yxf7?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACa4wdABQ24GTuBaECn27CExd0cb6zeo2LU",
+      "linkText": "watch the aftermovie"
     }, 
     { 
       "image": "assets/carousel/slide5.jpg",
-      "title": "Design hackathon results",
-      "description": "Check out the winning ideas from our latest internal hackathon.",
-      "link": "https://example.com/article2"
+      "title": "Solliciteer nu als community builder",
+      "description": "🫣We kunnen iemand die ongelukkig is op werk moeilijk aanzien. Word onze Community Builder en maak werk waar je trots op bent",
+      "link": "https://jobs.abiggercircle.com/",
+      "linkText": "Solliciteer nu als community builder"
     }
   ]
 }

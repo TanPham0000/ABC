@@ -12,6 +12,11 @@
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
 .overlay.active {
   display: block;
   opacity: 1;
@@ -96,6 +101,7 @@
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
+  text-wrap-style: balance;
 }
 
 .overlay-body .contact-button {
@@ -121,7 +127,7 @@
   color: var(--primary);
 }
 
-body.night-mode .social-nav address {
+body.night-mode .social-nav address a {
   color: var(--secondary);
 }
 

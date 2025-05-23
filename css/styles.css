@@ -90,6 +90,7 @@ h2 {
   color: var(--secondary);
   font-size: 3rem;
   transition: all 0.3s ease;
+  text-wrap-style: balance;
 }
 
 address {
