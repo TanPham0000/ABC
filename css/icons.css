@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: flex-end;
   gap: 1rem;
+  z-index: 50;
 }
 .social-container {
   display: flex;
@@ -187,7 +188,6 @@ body.night-mode .info-icon:hover .i-icon{
    body.night-mode .info-icon {
      display: none;
    }
-
 }
 
 @media (max-width: 480px) {

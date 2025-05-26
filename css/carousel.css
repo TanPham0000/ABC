@@ -165,7 +165,6 @@ video {
   background: transparent;
   fill: transparent;
   border: 2px solid var(--secondary);
-  transition: var(--transition);
 }
 
 #nextBtn:hover, #prevBtn:hover{
@@ -174,12 +173,12 @@ video {
 }
 
 #nextBtn:active, #prevBtn:active {
-  transform: scale(0.95);
+  transform: scale(1);
 }
 
 /* Add feedback animation for buttons */
 .carousel-btn.clicked {
-  animation: buttonClick 0.5s forwards;
+  animation: buttonClick 0.2s forwards;
 }
 
 @keyframes buttonClick {
