@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let isTransitioning = false;
   let startTime = 0;
 
+  // Locking the swipe direction to avoid confusion
+  let startX = 0;
+  let startY = 0;
+  let swipeDirectionLocked = false; // So we don't keep recalculating
+
   const getEventPos = (e) => {
     const p = e.touches?.[0] || e;
     return isMobile ? p.clientX : p.clientY;
@@ -77,20 +82,46 @@ document.addEventListener('DOMContentLoaded', () => {
   const dragStart = (e) => {
     if (isTransitioning) return;
     e.preventDefault(); // Prevents the browser’s default behavior (like scrolling), so the drag gesture is handled only by the code.
+    const p = e.touches?.[0] || e;
     startTime = Date.now();
-    startPos = getEventPos(e);
+    startX = p.clientX;
+    startY = p.clientY;
+    startPos = isMobile ? startX : startY;
+    swipeDirectionLocked = false;
+
     isDragging = true;
     animationID = requestAnimationFrame(animate);
     pauseAutoSlide();
     carouselTrack.classList.add('dragging');
   };
+  
   //	Continuously updates slide position during drag
   const drag = (e) => {
-    if (!isDragging) return;
-    const pos = getEventPos(e);
-    currentTranslate = pos - startPos;
-    setSlidePositions(currentTranslate / 3);
-  };
+  if (!isDragging) return;
+
+  // Get the current finger/mouse position
+  const p = e.touches?.[0] || e;
+  const deltaX = p.clientX - startX; // Horizontal movement
+  const deltaY = p.clientY - startY; // Vertical movement
+
+  // Lock the direction only once per drag interaction
+  if (!swipeDirectionLocked) {
+    if (isMobile && Math.abs(deltaY) > Math.abs(deltaX)) {
+      // On mobile: vertical movement is stronger → cancel drag
+      isDragging = false;
+      carouselTrack.classList.remove('dragging');
+      cancelAnimationFrame(animationID);
+      return; // Exit early
+    }
+    swipeDirectionLocked = true; // Lock direction
+  }
+
+  // Continue dragging normally
+  const pos = getEventPos(e); // Still uses X for mobile, Y for desktop
+  currentTranslate = pos - startPos;
+  setSlidePositions(currentTranslate / 3);
+};
+
 
   //Decides if the drag should trigger a new slide or snap back
   const dragEnd = () => {
