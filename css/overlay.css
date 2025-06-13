@@ -135,8 +135,9 @@ body.night-mode .social-nav address a {
 .social-nav address {
   font-size: 0.75rem;
   display: flex;
+  flex-direction: column;
+  gap: 5px;
   justify-content: space-between;
-  align-items: center;
   margin-top: 0.5rem;
 }
 
