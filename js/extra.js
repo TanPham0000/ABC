@@ -36,7 +36,7 @@ logoDesktop.onclick = () => {
   function showEasterEgg() {
     // Example: show a funny gif overlay
     const gif = document.createElement("img");
-    gif.src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTdhZjRlMDhyZjg5dW9yMXd4ZzBidjd1OW5ob3oxbHlzbWJueDA0MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DPJ7BcVmBi3dYVBT7v/giphy.gif"; // replace with your own
+    gif.src = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXp5ejZtNjVnYmtyZjE0Y216cGJybWZjdWVheTkzcDZtaXhrOXo0aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LLAEZHWpRmz8fITKGd/giphy.gif"; 
     gif.style.position = "fixed";
     gif.style.top = "50%";
     gif.style.left = "50%";

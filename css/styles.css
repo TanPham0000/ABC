@@ -101,6 +101,11 @@ address {
   transition: all 0.3s ease;
 }
 
+address a:hover {
+  font-style: italic;
+  text-decoration: underline;
+}
+
 #main-title {
   transform-style: preserve-3d;
   perspective: 1000px;
